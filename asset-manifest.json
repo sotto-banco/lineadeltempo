@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.82f17344.css",
-    "main.js": "/lineadeltempo/static/js/main.1db1ace5.js",
+    "main.js": "/lineadeltempo/static/js/main.7861289f.js",
     "static/js/787.8b9fc25c.chunk.js": "/lineadeltempo/static/js/787.8b9fc25c.chunk.js",
     "static/media/tl-icons.svg": "/lineadeltempo/static/media/tl-icons.1c53e8a9e53f55f53c93.svg",
     "static/media/tl-icons.woff2": "/lineadeltempo/static/media/tl-icons.b62c22657966850824b2.woff2",
@@ -10,11 +10,11 @@
     "static/media/tl-icons.ttf": "/lineadeltempo/static/media/tl-icons.569452640b1256d4c72b.ttf",
     "index.html": "/lineadeltempo/index.html",
     "main.82f17344.css.map": "/lineadeltempo/static/css/main.82f17344.css.map",
-    "main.1db1ace5.js.map": "/lineadeltempo/static/js/main.1db1ace5.js.map",
+    "main.7861289f.js.map": "/lineadeltempo/static/js/main.7861289f.js.map",
     "787.8b9fc25c.chunk.js.map": "/lineadeltempo/static/js/787.8b9fc25c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82f17344.css",
-    "static/js/main.1db1ace5.js"
+    "static/js/main.7861289f.js"
   ]
 }
