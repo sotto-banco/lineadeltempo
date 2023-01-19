@@ -1,0 +1,28 @@
+[
+    {
+    "start_date": {
+        "year": 1927
+    },
+    "text": {
+        "headline": "Sound",
+        "text": "The Jazz Singer is the first feature-length motion picture with synchronized sound. It stars Al Jolson as Jakie Rabinowitz, a Jewish cantor's son who becomes a jazz singer. The film was a huge success, and Jolson became a major star."
+    },
+    "display_date": "1927",
+    "autolink": true
+},
+{
+    "start_date": {
+        "year": 1924
+    },
+    "end_date": {
+        "year": 1929
+    },
+    "text": {
+        "headline": "BIBIBI ERA",
+        "text": "Lots of things happened in this time period."
+    },
+    "group": "groupA",
+    "display_date": "Metà anni '20",
+    "media": {"url": "../media/pics/test.png"}
+}
+]
