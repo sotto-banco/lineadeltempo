@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Timeline from 'timelinejs-react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const events: Slide[] = [
+		{
+			start_date: {
+				year: 1950
+			},
+			text: {
+				headline: 'TEST',
+				text: 'this is some test text'
+			},
+			display_date: '1950',
+			autolink: true
+		}
+	];
+	const title: TitleSlide = {};
+	const options: TimelineOptions = {};
+
+	return (
+		<div className='App'>
+			<div style={{ width: 500, height: 400, border: '2px solid black' }}>
+				<Timeline
+					target={<div className='timeline' />}
+					events={events}
+					title={title}
+					options={options}
+				/>
+			</div>
+		</div>
+	);
 }
 
 export default App;
