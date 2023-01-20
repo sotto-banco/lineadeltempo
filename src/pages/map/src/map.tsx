@@ -22,8 +22,8 @@ const Dummy = (props: DummyProps) => {
 				label='sotto banco'
 				selected='/map'
 			/>
-			<div className='pageTitle'>
-				<h1>Mappa</h1>
+			<div className='pageTitleContainer'>
+				<h2 className='pageTitle'>Mappa</h2>
 				<div className='markerTitle'>{markerTitle}</div>
 			</div>
 
@@ -88,17 +88,23 @@ export const MapPage = styled(Dummy)`
 	justify-content: flex-start;
 	align-items: center;
 
-	.pageTitle {
+	.pageTitleContainer {
 		width: 100%;
 		text-align: center;
 	}
 
+	.pageTitle {
+		width: 100%;
+		cursor: default;
+		user-select: none;
+	}
+
 	.mapContainer {
 		width: 100%;
-		height: 100%;
+		height: 70%;
 		display: flex;
 		flex-direction: row;
-		padding: 10px;
+		padding: 10px 40px;
 		box-sizing: border-box;
 	}
 
@@ -121,9 +127,10 @@ export const MapPage = styled(Dummy)`
 
 	.markerTitle {
 		width: 100%;
-		height: 50px;
+		height: 10px;
 		font-size: larger;
 		font-weight: bold;
+		margin-bottom: 10px;
 	}
 
 	.infoTitle {
@@ -135,7 +142,32 @@ export const MapPage = styled(Dummy)`
 
 	.infoText {
 		width: 100%;
-		height: 650px;
 		overflow: auto;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.mapContainer {
+			flex-direction: column;
+			padding: 10px;
+			height: 80%;
+		}
+
+		.map {
+			width: 100%;
+			height: 800px;
+		}
+
+		.infoBox {
+			width: 100%;
+			height: 200px;
+		}
+
+		.pageTitle {
+			display: none;
+		}
+
+		.markerTitle {
+			display: none;
+		}
 	}
 `;

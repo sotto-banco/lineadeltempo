@@ -16,7 +16,7 @@ const Dummy = (props: DummyProps) => {
 				label='sotto banco'
 				selected='/lineadeltempo'
 			/>
-			<h1>Linea del tempo</h1>
+			<h2 className='pageTitle'>Linea del tempo</h2>
 			<div className='timeline'>
 				<Timeline
 					target={<div className='timeline' />}
@@ -43,5 +43,12 @@ export const Home = styled(Dummy)`
 		border: 2px solid black;
 		border-radius: 10px;
 		overflow: hidden;
+	}
+
+	.pageTitle {
+		width: 100%;
+		text-align: center;
+		cursor: default;
+		user-select: none;
 	}
 `;

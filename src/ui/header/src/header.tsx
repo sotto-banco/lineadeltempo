@@ -26,6 +26,14 @@ const StyledHeader = (props: Props) => {
 				>
 					mappa
 				</div>
+				<div
+					className={
+						props.selected === '/info' ? 'navbutton selected' : 'navbutton'
+					}
+					onClick={() => navigate('/info')}
+				>
+					info
+				</div>
 			</div>
 		</div>
 	);
