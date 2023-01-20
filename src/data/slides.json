@@ -26,7 +26,14 @@
             "url": "https://i.postimg.cc/GhY82zpW/tree.jpg",
             "alt": "test",
             "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
-        }
+        },
+        "coords": 
+            {
+                "lat": 42.3189,
+                "lon": 12.0588,
+                "title": "Vetralla"
+            }
+        
     },
     {
         "start_date": {
