@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: flex-start;
     }
 `;

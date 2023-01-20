@@ -1,11 +1,12 @@
-import { Home } from './pages/home';
 import { GlobalStyles } from './ui/globalStyles';
+import { router } from './router';
+import { RouterProvider } from 'react-router-dom';
 
 const App = () => {
 	return (
 		<div id='app'>
 			<GlobalStyles />
-			<Home />
+			<RouterProvider router={router} />
 		</div>
 	);
 };

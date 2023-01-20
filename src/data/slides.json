@@ -6,9 +6,9 @@
         },
         "display_date": "Title",
         "media": {
-            "url": "https://i.postimg.cc/8sBzbKJs/plane.jpg",
+            "url": "https://i.postimg.cc/Pf0vT0db/plane.jpg",
             "alt": "test",
-            "thumbnail": "https://user-images.githubusercontent.com/123064584/213569941-7b0af9cd-3039-4cb2-8980-a93e306241c3.png"
+            "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
         }
     },
     "slides": [
@@ -23,9 +23,9 @@
         "display_date": "1927",
         "autolink": true,
         "media": {
-            "url": "https://i.postimg.cc/dLstN2r6/tree.jpg",
+            "url": "https://i.postimg.cc/GhY82zpW/tree.jpg",
             "alt": "test",
-            "thumbnail": "https://user-images.githubusercontent.com/123064584/213570136-1c4a5894-27ea-4679-ab06-5ebcf12aff83.png"
+            "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
         }
     },
     {
@@ -42,9 +42,9 @@
         "group": "groupA",
         "display_date": "Metà anni '20",
         "media": {
-            "url": "https://i.postimg.cc/7fKPF5Nk/vesuvio.jpg",
+            "url": "https://i.postimg.cc/Vk8SbMrd/vesuvio.jpg",
             "alt": "test",
-            "thumbnail": "https://user-images.githubusercontent.com/123064584/213569941-7b0af9cd-3039-4cb2-8980-a93e306241c3.png"
+            "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
         }
     }
     ]
