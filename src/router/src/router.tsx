@@ -6,18 +6,23 @@ import { ErrorElement } from './errorElement';
 
 export const router = createBrowserRouter([
 	{
-		path: '/lineadeltempo',
+		path: 'lineadeltempo/',
 		element: <Home />,
 		errorElement: <ErrorElement />
 	},
 	{
-		path: '/map',
+		path: '/lineadeltempo/map',
 		element: <MapPage />,
 		errorElement: <ErrorElement />
 	},
 	{
-		path: '/info',
+		path: 'lineadeltempo/info',
 		element: <Info />,
+		errorElement: <ErrorElement />
+	},
+	{
+		path: '*',
+		element: <ErrorElement />,
 		errorElement: <ErrorElement />
 	}
 ]);

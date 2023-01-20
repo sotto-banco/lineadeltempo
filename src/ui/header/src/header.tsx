@@ -10,27 +10,31 @@ const StyledHeader = (props: Props) => {
 			<div className='nav'>
 				<div
 					className={
-						props.selected === '/lineadeltempo'
+						props.selected === '/lineadeltempo/'
 							? 'navbutton selected'
 							: 'navbutton'
 					}
-					onClick={() => navigate('/lineadeltempo')}
+					onClick={() => navigate('/lineadeltempo/')}
 				>
 					linea del tempo
 				</div>
 				<div
 					className={
-						props.selected === '/map' ? 'navbutton selected' : 'navbutton'
+						props.selected === '/lineadeltempo/map'
+							? 'navbutton selected'
+							: 'navbutton'
 					}
-					onClick={() => navigate('/map')}
+					onClick={() => navigate('/lineadeltempo/map')}
 				>
 					mappa
 				</div>
 				<div
 					className={
-						props.selected === '/info' ? 'navbutton selected' : 'navbutton'
+						props.selected === '/lineadeltempo/info'
+							? 'navbutton selected'
+							: 'navbutton'
 					}
-					onClick={() => navigate('/info')}
+					onClick={() => navigate('/lineadeltempo/info')}
 				>
 					info
 				</div>
