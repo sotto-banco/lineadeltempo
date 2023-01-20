@@ -9,6 +9,8 @@ import slides from '../../../data/slides.json';
 import { useState } from 'react';
 import uuid from 'react-uuid';
 
+import parse from 'html-react-parser';
+
 const Dummy = (props: DummyProps) => {
 	const [markerTitle, setMarkerTitle] = useState<string>('');
 	const [infoText, setInfoText] = useState<{
@@ -33,7 +35,7 @@ const Dummy = (props: DummyProps) => {
 						provider={stamenTerrain}
 						height={700}
 						defaultCenter={[41.902782, 12.496366]}
-						defaultZoom={11}
+						defaultZoom={4.5}
 						attribution={
 							<div>
 								Map tiles by Stamen Design, under CC BY 3.0. Data by
@@ -73,7 +75,7 @@ const Dummy = (props: DummyProps) => {
 				</div>
 				<div className='infoBox'>
 					<div className='infoTitle'>{infoText.coordsTitle}</div>
-					<div className='infoText'>{infoText.text}</div>
+					<div className='infoText'>{parse(infoText.text)}</div>
 				</div>
 			</div>
 		</div>
@@ -138,6 +140,7 @@ export const MapPage = styled(Dummy)`
 		height: 50px;
 		font-size: larger;
 		font-weight: bold;
+		margin-bottom: 20px;
 	}
 
 	.infoText {

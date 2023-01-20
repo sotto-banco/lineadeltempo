@@ -8,7 +8,10 @@ const Dummy = (props: DummyProps) => {
 	const events: Slide[] = slides.slides;
 	const title: TitleSlide = slides.title;
 	const options: TimelineOptions = {
-		language: 'it'
+		language: 'it',
+		height: 20,
+		menubar_height: 500,
+		scale_factor: 100
 	};
 	return (
 		<div className={props.className}>

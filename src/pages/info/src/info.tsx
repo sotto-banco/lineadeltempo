@@ -9,6 +9,10 @@ const Dummy = (props: DummyProps) => {
 				label='sotto banco'
 				selected='/info'
 			/>
+			<h2 className='pageTitle'>Info</h2>
+			<div>
+				<p>sotto-banco 2023</p>
+			</div>
 		</div>
 	);
 };
@@ -20,4 +24,11 @@ export const Info = styled(Dummy)`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+
+	.pageTitle {
+		width: 100%;
+		text-align: center;
+		cursor: default;
+		user-select: none;
+	}
 `;
