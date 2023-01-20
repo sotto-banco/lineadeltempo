@@ -1,37 +1,51 @@
-[
-    {
-    "start_date": {
-        "year": 1927
-    },
-    "text": {
-        "headline": "Sound",
-        "text": "The Jazz Singer is the first feature-length motion picture with synchronized sound. It stars Al Jolson as Jakie Rabinowitz, a Jewish cantor's son who becomes a jazz singer. The film was a huge success, and Jolson became a major star."
-    },
-    "display_date": "1927",
-    "autolink": true,
-    "media": {
-        "url": "https://user-images.githubusercontent.com/123064584/213570528-1c638018-d4e8-49e3-a969-0cc7d95088e7.jpg",
-        "alt": "test",
-        "thumbnail": "https://user-images.githubusercontent.com/123064584/213570136-1c4a5894-27ea-4679-ab06-5ebcf12aff83.png"
-    }
-},
 {
-    "start_date": {
-        "year": 1924
+    "title": {
+        "text": {
+            "headline": "BIBIBI ERA",
+            "text": "Lots of things happened in this time period."
+        },
+        "display_date": "Title",
+        "media": {
+            "url": "https://i.postimg.cc/8sBzbKJs/plane.jpg",
+            "alt": "test",
+            "thumbnail": "https://user-images.githubusercontent.com/123064584/213569941-7b0af9cd-3039-4cb2-8980-a93e306241c3.png"
+        }
     },
-    "end_date": {
-        "year": 1929
+    "slides": [
+        {
+        "start_date": {
+            "year": 1927
+        },
+        "text": {
+            "headline": "Sound",
+            "text": "The Jazz Singer is the first feature-length motion picture with synchronized sound. It stars Al Jolson as Jakie Rabinowitz, a Jewish cantor's son who becomes a jazz singer. The film was a huge success, and Jolson became a major star."
+        },
+        "display_date": "1927",
+        "autolink": true,
+        "media": {
+            "url": "https://i.postimg.cc/dLstN2r6/tree.jpg",
+            "alt": "test",
+            "thumbnail": "https://user-images.githubusercontent.com/123064584/213570136-1c4a5894-27ea-4679-ab06-5ebcf12aff83.png"
+        }
     },
-    "text": {
-        "headline": "BIBIBI ERA",
-        "text": "Lots of things happened in this time period."
-    },
-    "group": "groupA",
-    "display_date": "Metà anni '20",
-    "media": {
-        "url": "https://user-images.githubusercontent.com/123064584/213569524-f426f934-bb06-43cb-b7f9-abb1528c6a40.png",
-        "alt": "test",
-        "thumbnail": "https://user-images.githubusercontent.com/123064584/213569941-7b0af9cd-3039-4cb2-8980-a93e306241c3.png"
+    {
+        "start_date": {
+            "year": 1924
+        },
+        "end_date": {
+            "year": 1929
+        },
+        "text": {
+            "headline": "BIBIBI ERA",
+            "text": "Lots of things happened in this time period."
+        },
+        "group": "groupA",
+        "display_date": "Metà anni '20",
+        "media": {
+            "url": "https://i.postimg.cc/7fKPF5Nk/vesuvio.jpg",
+            "alt": "test",
+            "thumbnail": "https://user-images.githubusercontent.com/123064584/213569941-7b0af9cd-3039-4cb2-8980-a93e306241c3.png"
+        }
     }
+    ]
 }
-]

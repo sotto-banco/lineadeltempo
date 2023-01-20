@@ -4,8 +4,8 @@ import slides from '../../../data/slides.json';
 import { DummyProps } from './types';
 
 const Dummy = (props: DummyProps) => {
-	const events: Slide[] = slides;
-	const title: TitleSlide = {};
+	const events: Slide[] = slides.slides;
+	const title: TitleSlide = slides.title;
 	const options: TimelineOptions = {
 		language: 'it'
 	};
