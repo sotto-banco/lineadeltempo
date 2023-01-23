@@ -28,8 +28,8 @@ export const GlobalStyles = createGlobalStyle`
         color: black !important;
     }
 
-    .tl-timemarker-content-container
+    /* .tl-timemarker-content-container
  *:hover {
         color: orange !important;
-    }
+    } */
 `;

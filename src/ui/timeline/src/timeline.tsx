@@ -11,7 +11,7 @@ const Dummy = (props: Props) => {
 		initial_zoom: 1,
 		height: 700,
 		hash_bookmark: true,
-		default_bg_color: { r: 150, g: 150, b: 0 },
+		default_bg_color: { r: 225, g: 225, b: 225 },
 		marker_height_min: 30,
 		use_bc: true,
 		duration: 2000,

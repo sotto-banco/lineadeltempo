@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Header } from '../../../ui/header';
 import { DummyProps } from './types';
 
-import { Map, Marker } from 'pigeon-maps';
+// import { Map, Marker } from 'pigeon-maps';
 import { stamenTerrain } from 'pigeon-maps/providers';
 
 import slides from '../../../data/slides.json';
@@ -10,6 +10,14 @@ import { useState } from 'react';
 import uuid from 'react-uuid';
 
 import parse from 'html-react-parser';
+
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
+import L from 'leaflet';
+import markerIcon from '../../../media/pics/marker.png';
+const icon = L.icon({
+	iconUrl: markerIcon,
+	iconSize: [41, 41]
+});
 
 const Dummy = (props: DummyProps) => {
 	const [markerTitle, setMarkerTitle] = useState<string>('');
@@ -24,54 +32,43 @@ const Dummy = (props: DummyProps) => {
 				label='sotto banco'
 				selected='/map'
 			/>
-			<div className='pageTitleContainer'>
-				<h2 className='pageTitle'>Mappa</h2>
-				<div className='markerTitle'>{markerTitle}</div>
-			</div>
 
 			<div className='mapContainer'>
 				<div className='map'>
-					<Map
-						provider={stamenTerrain}
-						height={700}
-						defaultCenter={[41.902782, 12.496366]}
-						defaultZoom={4.5}
-						attribution={
-							<div>
-								Map tiles by Stamen Design, under CC BY 3.0. Data by
-								OpenStreetMap, under ODbL.
-							</div>
-						}
-						onClick={() => {
-							setInfoText({ coordsTitle: '', text: '' });
-							setMarkerTitle('');
-						}}
+					<MapContainer
+						center={[41.902782, 12.4963]}
+						zoom={6}
+						scrollWheelZoom={true}
+						className='mapLeaflet'
 					>
-						{slides.slides.map(s => {
-							if (s.coords) {
+						<TileLayer
+							url='https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png'
+							attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+							subdomains='abcd'
+						/>
+						{slides.slides.map(slide => {
+							if (slide.coords) {
 								return (
 									<Marker
 										key={uuid()}
-										width={50}
-										anchor={[s.coords.lat, s.coords.lon]}
-										payload={s.coords.title}
-										onMouseOver={({ payload }) => {
-											setMarkerTitle(payload);
+										position={[slide.coords.lat, slide.coords.lon]}
+										icon={icon}
+										eventHandlers={{
+											click: () => {
+												setMarkerTitle(slide.coords.title);
+												setInfoText({
+													coordsTitle: slide.coords.title,
+													text: slide.text.text
+												});
+											}
 										}}
-										onMouseOut={() => {
-											setMarkerTitle('');
-										}}
-										onClick={() => {
-											setInfoText({
-												coordsTitle: s.coords.title,
-												text: s.text.text
-											});
-										}}
-									/>
+									>
+										<Tooltip>{slide.coords.title}</Tooltip>
+									</Marker>
 								);
 							}
 						})}
-					</Map>
+					</MapContainer>
 				</div>
 				<div className='infoBox'>
 					<div className='infoTitle'>{infoText.coordsTitle}</div>
@@ -90,32 +87,28 @@ export const MapPage = styled(Dummy)`
 	justify-content: flex-start;
 	align-items: center;
 
-	.pageTitleContainer {
-		width: 100%;
-		text-align: center;
-	}
-
-	.pageTitle {
-		width: 100%;
-		cursor: default;
-		user-select: none;
-	}
-
 	.mapContainer {
 		width: 100%;
-		height: 70%;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
-		padding: 10px 40px;
+		align-items: center;
+		justify-content: center;
 		box-sizing: border-box;
+		padding: 0 10px;
 	}
 
 	.map {
 		width: 80%;
-		height: 700px;
+		height: 90%;
 		border: 2px solid black;
 		border-radius: 10px;
 		overflow: hidden;
+	}
+
+	.mapLeaflet {
+		width: 100%;
+		height: 100%;
 	}
 
 	.infoBox {
@@ -125,14 +118,6 @@ export const MapPage = styled(Dummy)`
 		flex-direction: column;
 		padding: 20px;
 		box-sizing: border-box;
-	}
-
-	.markerTitle {
-		width: 100%;
-		height: 10px;
-		font-size: larger;
-		font-weight: bold;
-		margin-bottom: 10px;
 	}
 
 	.infoTitle {
@@ -151,26 +136,23 @@ export const MapPage = styled(Dummy)`
 	@media only screen and (max-width: 768px) {
 		.mapContainer {
 			flex-direction: column;
-			padding: 10px;
-			height: 80%;
+			height: 92%;
+			width: 100%;
+			padding-top: 5px;
 		}
 
 		.map {
 			width: 100%;
-			height: 800px;
+			height: 650px;
 		}
 
 		.infoBox {
 			width: 100%;
-			height: 200px;
+			height: 20%;
 		}
 
-		.pageTitle {
-			display: none;
-		}
-
-		.markerTitle {
-			display: none;
+		.infoTitle {
+			margin-bottom: 5px;
 		}
 	}
 `;
