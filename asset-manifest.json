@@ -1,18 +1,14 @@
 {
   "files": {
-    "main.css": "/lineadeltempo/static/css/main.312edad0.css",
-    "main.js": "/lineadeltempo/static/js/main.fc2a3f88.js",
-    "static/media/tl-icons.svg": "/lineadeltempo/static/media/tl-icons.1c53e8a9e53f55f53c93.svg",
-    "static/media/tl-icons.woff2": "/lineadeltempo/static/media/tl-icons.b62c22657966850824b2.woff2",
-    "static/media/tl-icons.eot": "/lineadeltempo/static/media/tl-icons.a204f49302743fadf215.eot",
-    "static/media/tl-icons.woff": "/lineadeltempo/static/media/tl-icons.a05a521aade7eba93463.woff",
-    "static/media/tl-icons.ttf": "/lineadeltempo/static/media/tl-icons.569452640b1256d4c72b.ttf",
+    "main.css": "/lineadeltempo/static/css/main.a189e101.css",
+    "main.js": "/lineadeltempo/static/js/main.53c36d5f.js",
+    "static/media/marker.png": "/lineadeltempo/static/media/marker.b39e6e0503a926d8ad2e.png",
     "index.html": "/lineadeltempo/index.html",
-    "main.312edad0.css.map": "/lineadeltempo/static/css/main.312edad0.css.map",
-    "main.fc2a3f88.js.map": "/lineadeltempo/static/js/main.fc2a3f88.js.map"
+    "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
+    "main.53c36d5f.js.map": "/lineadeltempo/static/js/main.53c36d5f.js.map"
   },
   "entrypoints": [
-    "static/css/main.312edad0.css",
-    "static/js/main.fc2a3f88.js"
+    "static/css/main.a189e101.css",
+    "static/js/main.53c36d5f.js"
   ]
 }
