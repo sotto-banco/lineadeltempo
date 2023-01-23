@@ -1,18 +1,38 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
-import Timeline from 'timelinejs-react';
 import slides from '../../../data/slides.json';
 import { Header } from '../../../ui/header';
 import { DummyProps } from './types';
+const tl = require('../../../test/timeline3/js/timeline.js');
 
 const Dummy = (props: DummyProps) => {
-	const events: Slide[] = slides.slides;
-	const title: TitleSlide = slides.title;
-	const options: TimelineOptions = {
+	const events = slides.slides;
+	const title = slides.title;
+	const options = {
 		language: 'it',
 		height: 20,
 		menubar_height: 500,
-		scale_factor: 100
+		scale_factor: 100,
+		duration: 5000
 	};
+
+	useEffect(() => {
+		new tl.TL.Timeline(
+			'timeline-embed',
+			{ events },
+			{
+				initial_zoom: 1,
+				height: 700,
+				hash_bookmark: true,
+				default_bg_color: { r: 150, g: 150, b: 0 },
+				marker_height_min: 30,
+				use_bc: true,
+				duration: 2000,
+				track_events: ['nav_next', 'nav_previous']
+			}
+		);
+	}, []);
+
 	return (
 		<div className={props.className}>
 			<Header
@@ -21,12 +41,16 @@ const Dummy = (props: DummyProps) => {
 			/>
 			<h2 className='pageTitle'>Linea del tempo</h2>
 			<div className='timeline'>
-				<Timeline
+				{/* <Timeline
 					target={<div className='timeline' />}
 					events={events}
 					title={title}
 					options={options}
-				/>
+				/> */}
+				<div
+					id='timeline-embed'
+					style={{ width: '100%', height: '700px' }}
+				></div>
 			</div>
 		</div>
 	);

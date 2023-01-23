@@ -22,4 +22,14 @@ export const GlobalStyles = createGlobalStyle`
         align-items: center;
         justify-content: flex-start;
     }
+
+    .tl-timemarker-content-container
+ * {
+        color: black !important;
+    }
+
+    .tl-timemarker-content-container
+ *:hover {
+        color: orange !important;
+    }
 `;
