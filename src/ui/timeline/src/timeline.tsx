@@ -30,13 +30,16 @@ const Dummy = (props: Props) => {
 
 export const Timeline = styled(Dummy)`
 	width: 95%;
-	height: 600px;
+	height: 80%;
 	border: 2px solid black;
 	border-radius: 10px;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
 
 	#timeline-embed {
 		width: 100%;
-		height: 600px;
+		height: 95%;
 	}
 `;

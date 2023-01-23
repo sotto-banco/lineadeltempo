@@ -4,13 +4,14 @@ import { Props } from './types';
 
 const StyledHeader = (props: Props) => {
 	const navigate = useNavigate();
+
 	return (
 		<div className={props.className}>
 			<h2 className='title'>{props.label}</h2>
 			<div className='nav'>
 				<div
 					className={
-						props.selected === '/lineadeltempo/'
+						props.selected?.startsWith('/lineadeltempo')
 							? 'navbutton selected'
 							: 'navbutton'
 					}
@@ -20,9 +21,7 @@ const StyledHeader = (props: Props) => {
 				</div>
 				<div
 					className={
-						props.selected === '/lineadeltempo/map'
-							? 'navbutton selected'
-							: 'navbutton'
+						props.selected === '/map' ? 'navbutton selected' : 'navbutton'
 					}
 					onClick={() => navigate('/lineadeltempo/map')}
 				>
@@ -30,9 +29,7 @@ const StyledHeader = (props: Props) => {
 				</div>
 				<div
 					className={
-						props.selected === '/lineadeltempo/info'
-							? 'navbutton selected'
-							: 'navbutton'
+						props.selected === '/info' ? 'navbutton selected' : 'navbutton'
 					}
 					onClick={() => navigate('/lineadeltempo/info')}
 				>

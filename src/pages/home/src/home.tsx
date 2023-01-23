@@ -10,7 +10,6 @@ const Dummy = (props: DummyProps) => {
 				label='sotto banco'
 				selected='/lineadeltempo'
 			/>
-			<h2 className='pageTitle'>Linea del tempo</h2>
 			<Timeline />
 		</div>
 	);
