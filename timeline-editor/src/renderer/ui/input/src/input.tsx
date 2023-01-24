@@ -1,0 +1,25 @@
+import styled from 'styled-components';
+import { Props } from './types';
+
+const Dummy = (props: Props) => {
+  return (
+    <div className={props.className}>
+      <div className="label">{props.label}:</div>
+      <input
+        value={props.value}
+        onChange={(e) => props.change(e.currentTarget.value)}
+        size={50}
+      />
+    </div>
+  );
+};
+
+export const Input = styled(Dummy)`
+  width: 100%;
+  margin-bottom: 20px;
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+`;
