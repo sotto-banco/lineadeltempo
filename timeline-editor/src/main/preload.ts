@@ -6,7 +6,17 @@ export type Channels =
   | 'set-title'
   | 'get-projects'
   | 'got-title'
-  | 'got-projects';
+  | 'got-projects'
+  | 'set-projects'
+  | 'get-data-json-path'
+  | 'got-data-json-path'
+  | 'set-data-json-path'
+  | 'get-events'
+  | 'got-events'
+  | 'set-events'
+  | 'get-eras'
+  | 'got-eras'
+  | 'set-eras';
 
 const electronHandler = {
   ipcRenderer: {

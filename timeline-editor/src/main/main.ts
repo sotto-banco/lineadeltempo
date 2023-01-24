@@ -16,8 +16,6 @@ import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 import { ipcHandler } from './ipcHandler';
 
-// import { getTitle } from './store';
-
 class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';

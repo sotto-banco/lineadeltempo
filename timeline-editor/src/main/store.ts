@@ -1,4 +1,5 @@
 import Store, { Schema } from 'electron-store';
+import fs from 'fs';
 
 export interface MediaObject {
   url: string;
@@ -31,7 +32,7 @@ interface CoordsObject {
   title: string;
 }
 
-interface Event {
+export interface EventObject {
   start_date: DateObject;
   end_date?: DateObject;
   display_date: string;
@@ -52,8 +53,9 @@ interface Era {
 
 interface Data {
   title: TitleObject;
-  events: Event[];
+  events: EventObject[];
   eras: Era[];
+  dataJsonPath: string;
 }
 
 // dataSchema
@@ -297,14 +299,49 @@ const dataSchema: Schema<Data> = {
     },
     default: [],
   },
+  dataJsonPath: {
+    type: 'string',
+    default: '',
+  },
 };
 
 const store = new Store<Data>({ schema: dataSchema });
 
-export const getTitle = () => store.get('title');
-export const getEvents = () => store.get('events');
+export const getTitle = () => {
+  if (store.get('dataJsonPath') !== '') {
+    try {
+      const dataJson = JSON.parse(
+        fs.readFileSync(store.get('dataJsonPath'), 'utf8')
+      );
+      store.set('title', dataJson.title);
+      store.set('events', dataJson.events);
+      store.set('eras', dataJson.eras);
+      return store.get('title');
+    } catch (error) {
+      return null;
+    }
+  }
+};
+export const getEvents = () => {
+  if (store.get('dataJsonPath') !== '') {
+    try {
+      const dataJson = JSON.parse(
+        fs.readFileSync(store.get('dataJsonPath'), 'utf8')
+      );
+      store.set('title', dataJson.title);
+      store.set('events', dataJson.events);
+      store.set('eras', dataJson.eras);
+      return store.get('events');
+    } catch (error) {
+      return null;
+    }
+  }
+};
 export const getEras = () => store.get('eras');
+export const getDataJsonPath = () => store.get('dataJsonPath');
 
 export const setTitle = (title: TitleObject) => store.set('title', title);
-export const setEvents = (events: Event[]) => store.set('events', events);
+export const setEvents = (events: EventObject[]) => store.set('events', events);
 export const setEras = (eras: Era[]) => store.set('eras', eras);
+export const setDataJsonPath = (path: string) =>
+  store.set('dataJsonPath', path);

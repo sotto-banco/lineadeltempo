@@ -4,7 +4,9 @@ import {
   shell,
   BrowserWindow,
   MenuItemConstructorOptions,
+  dialog,
 } from 'electron';
+import { setDataJsonPath } from './store';
 
 interface DarwinMenuItemConstructorOptions extends MenuItemConstructorOptions {
   selector?: string;
@@ -198,17 +200,31 @@ export default class MenuBuilder {
         label: '&Menu',
         submenu: [
           {
-            label: '&reload',
-            accelerator: 'Ctrl+R',
-            click: () => {
-              this.mainWindow.webContents.reload();
-            },
-          },
-          {
             label: '&devtools',
             accelerator: 'Alt+Ctrl+I',
             click: () => {
               this.mainWindow.webContents.toggleDevTools();
+            },
+          },
+          {
+            label: 'apri json',
+            accelerator: 'Ctrl+O',
+            click: () => {
+              const updatedPath = dialog.showOpenDialogSync({
+                properties: ['openFile'],
+                filters: [{ name: 'json', extensions: ['json'] }],
+              });
+              if (updatedPath) {
+                setDataJsonPath(updatedPath[0]);
+                this.mainWindow.webContents.reload();
+              }
+            },
+          },
+          {
+            label: '&reload',
+            accelerator: 'Ctrl+R',
+            click: () => {
+              this.mainWindow.webContents.reload();
             },
           },
           {

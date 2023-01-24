@@ -10,7 +10,7 @@ const Dummy = (props: Props) => {
   const [storedTitle, setStoredTitle] = useState<TitleObject | null>();
 
   useEffect(() => {
-    window.electron.ipcRenderer.sendMessage('get-title', ['hello']);
+    window.electron.ipcRenderer.sendMessage('get-title', ['title-page']);
     window.electron.ipcRenderer.on('got-title', (title: TitleObject) => {
       setStoredTitle(title);
     });
@@ -32,7 +32,7 @@ const Dummy = (props: Props) => {
               })
             }
           />
-          <Input
+          <Text
             label="descrizione"
             value={storedTitle.text.text}
             change={(v) =>
@@ -42,7 +42,6 @@ const Dummy = (props: Props) => {
               })
             }
           />
-          <Text />
           <Input
             label="immagine url"
             value={storedTitle.media.url}

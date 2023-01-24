@@ -6,6 +6,7 @@ const Dummy = (props: Props) => {
     <div className={props.className}>
       <div className="label">{props.label}:</div>
       <input
+        className="input"
         value={props.value}
         onChange={(e) => props.change(e.currentTarget.value)}
         size={50}
@@ -21,5 +22,9 @@ export const Input = styled(Dummy)`
   .label {
     font-weight: bold;
     margin-bottom: 5px;
+  }
+
+  .input {
+    padding: 4px;
   }
 `;
