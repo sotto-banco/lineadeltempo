@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Header } from '../../../ui/header';
 import { DummyProps } from './types';
 
-import slides from '../../../data/slides.json';
+import timelineData from '../../../data/timelineData.json';
 import { useState } from 'react';
 import uuid from 'react-uuid';
 
@@ -12,7 +12,6 @@ import {
 	MapContainer,
 	TileLayer,
 	Marker,
-	Popup,
 	Tooltip,
 	useMapEvents
 } from 'react-leaflet';
@@ -31,7 +30,6 @@ const DummyEvents = (props: { click: () => void }) => {
 };
 
 const Dummy = (props: DummyProps) => {
-	const [_, setMarkerTitle] = useState<string>('');
 	const [infoText, setInfoText] = useState<{
 		coordsTitle: string;
 		coordsDate: string;
@@ -55,7 +53,6 @@ const Dummy = (props: DummyProps) => {
 					>
 						<DummyEvents
 							click={() => {
-								setMarkerTitle('');
 								setInfoText({ coordsTitle: '', text: '', coordsDate: '' });
 							}}
 						/>
@@ -64,28 +61,27 @@ const Dummy = (props: DummyProps) => {
 							attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 							subdomains='abcd'
 						/>
-						{slides.slides.map(slide => {
-							if (slide.coords) {
+						{timelineData.events.map(event => {
+							if (event.coords) {
 								return (
 									<Marker
 										key={uuid()}
-										position={[slide.coords.lat, slide.coords.lon]}
+										position={[event.coords.lat, event.coords.lon]}
 										icon={icon}
 										eventHandlers={{
 											click: () => {
-												setMarkerTitle(slide.coords.title);
 												setInfoText({
-													coordsTitle: slide.coords.title,
-													text: slide.text.text,
-													coordsDate: slide.display_date
+													coordsTitle: event.coords.title,
+													text: event.text.text,
+													coordsDate: event.display_date
 												});
 											}
 										}}
 									>
-										<Tooltip>{slide.coords.title}</Tooltip>
+										<Tooltip>{event.coords.title}</Tooltip>
 									</Marker>
 								);
-							}
+							} else return null;
 						})}
 					</MapContainer>
 				</div>

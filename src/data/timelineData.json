@@ -9,7 +9,7 @@
             "alt": "'900"
         }
     },
-    "slides": [
+    "events": [
         {
         "start_date": {
             "year": 1870
@@ -321,5 +321,23 @@
             "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
         }
     }
+    ],
+    "eras": [
+        {
+            "start_date": {
+                "year": 1914,
+                "month": 6,
+                "day": 28
+            },
+            "end_date": {
+                "year": 1918,
+                "month": 11,
+                "day": 3
+            },
+            "text": {
+                "headline": "I Guerra Mondiale",
+                "text": "Schieramenti:<br /><strong>Alleanza</strong>:<br />- Inghilterra<br />- Francia<br />- Russia<br />- Italia<br />- Stati Uniti<br /><strong>Asse</strong>:<br />- Germania<br />- Austria-Ungheria<br />- Impero Ottomano<br />- Bulgaria<br />- Giappone<br />"
+            }
+        }
     ]
 }

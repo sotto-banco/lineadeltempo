@@ -1,26 +1,30 @@
 import styled from 'styled-components';
 import { Props } from './types';
-import slides from '../../../data/slides.json';
+import timelineData from '../../../data/timelineData.json';
 import { useEffect } from 'react';
 import { TL } from './js/timeline.js';
 
 const Dummy = (props: Props) => {
-	const events = slides.slides;
-	const title = slides.title;
-	const options = {
-		initial_zoom: 1,
-		height: 700,
-		hash_bookmark: true,
-		font: 'ubuntu',
-		marker_height_min: 30,
-		use_bc: true,
-		duration: 500,
-		track_events: ['nav_next', 'nav_previous']
-	};
-
 	useEffect(() => {
-		new TL.Timeline('timeline-embed', { events }, options);
-	}, [events, options]);
+		new TL.Timeline(
+			'timeline-embed',
+			{
+				title: timelineData.title,
+				events: timelineData.events,
+				eras: timelineData.eras
+			},
+			{
+				initial_zoom: 1,
+				height: 700,
+				hash_bookmark: true,
+				font: 'ubuntu',
+				marker_height_min: 30,
+				use_bc: true,
+				duration: 500,
+				track_events: ['nav_next', 'nav_previous']
+			}
+		);
+	}, []);
 	return (
 		<div className={props.className}>
 			<div id='timeline-embed' />
