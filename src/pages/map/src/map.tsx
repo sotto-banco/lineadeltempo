@@ -182,10 +182,17 @@ export const MapPage = styled(Dummy)`
 		.infoBox {
 			width: 100%;
 			height: 40%;
+			font-size: small;
+			padding: 5px;
 		}
 
 		.infoDate {
 			margin-bottom: 5px;
+			font-size: small;
+		}
+
+		.infoText {
+			font-size: small;
 		}
 	}
 `;
