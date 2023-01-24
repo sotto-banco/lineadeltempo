@@ -11,10 +11,10 @@ const Dummy = (props: Props) => {
 		initial_zoom: 1,
 		height: 700,
 		hash_bookmark: true,
-		default_bg_color: { r: 225, g: 225, b: 225 },
+		font: 'ubuntu',
 		marker_height_min: 30,
 		use_bc: true,
-		duration: 2000,
+		duration: 500,
 		track_events: ['nav_next', 'nav_previous']
 	};
 

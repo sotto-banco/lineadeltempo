@@ -2,16 +2,20 @@ import styled from 'styled-components';
 import { Header } from '../../../ui/header';
 import { DummyProps } from './types';
 
-// import { Map, Marker } from 'pigeon-maps';
-import { stamenTerrain } from 'pigeon-maps/providers';
-
 import slides from '../../../data/slides.json';
 import { useState } from 'react';
 import uuid from 'react-uuid';
 
 import parse from 'html-react-parser';
 
-import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
+import {
+	MapContainer,
+	TileLayer,
+	Marker,
+	Popup,
+	Tooltip,
+	useMapEvents
+} from 'react-leaflet';
 import L from 'leaflet';
 import markerIcon from '../../../media/pics/marker.png';
 const icon = L.icon({
@@ -19,12 +23,20 @@ const icon = L.icon({
 	iconSize: [41, 41]
 });
 
+const DummyEvents = (props: { click: () => void }) => {
+	useMapEvents({
+		click: () => props.click()
+	});
+	return null;
+};
+
 const Dummy = (props: DummyProps) => {
-	const [markerTitle, setMarkerTitle] = useState<string>('');
+	const [_, setMarkerTitle] = useState<string>('');
 	const [infoText, setInfoText] = useState<{
 		coordsTitle: string;
+		coordsDate: string;
 		text: string;
-	}>({ coordsTitle: '', text: '' });
+	}>({ coordsTitle: '', text: '', coordsDate: '' });
 
 	return (
 		<div className={props.className}>
@@ -41,6 +53,12 @@ const Dummy = (props: DummyProps) => {
 						scrollWheelZoom={true}
 						className='mapLeaflet'
 					>
+						<DummyEvents
+							click={() => {
+								setMarkerTitle('');
+								setInfoText({ coordsTitle: '', text: '', coordsDate: '' });
+							}}
+						/>
 						<TileLayer
 							url='https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png'
 							attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -58,7 +76,8 @@ const Dummy = (props: DummyProps) => {
 												setMarkerTitle(slide.coords.title);
 												setInfoText({
 													coordsTitle: slide.coords.title,
-													text: slide.text.text
+													text: slide.text.text,
+													coordsDate: slide.display_date
 												});
 											}
 										}}
@@ -71,8 +90,17 @@ const Dummy = (props: DummyProps) => {
 					</MapContainer>
 				</div>
 				<div className='infoBox'>
-					<div className='infoTitle'>{infoText.coordsTitle}</div>
-					<div className='infoText'>{parse(infoText.text)}</div>
+					{infoText.coordsTitle === '' ? (
+						<div className='infoText'>
+							Clicca su un marker per visualizzare le info
+						</div>
+					) : (
+						<>
+							<div className='infoTitle'>{infoText.coordsTitle}</div>
+							<div className='infoDate'>{infoText.coordsDate}</div>
+							<div className='infoText'>{parse(infoText.text)}</div>
+						</>
+					)}
 				</div>
 			</div>
 		</div>
@@ -122,10 +150,15 @@ export const MapPage = styled(Dummy)`
 
 	.infoTitle {
 		width: 100%;
-		height: 50px;
 		font-size: larger;
 		font-weight: bold;
+		border-bottom: 1px solid black;
+		padding: 5px 0;
+	}
+
+	.infoDate {
 		margin-bottom: 20px;
+		padding: 5px 0;
 	}
 
 	.infoText {
@@ -143,15 +176,15 @@ export const MapPage = styled(Dummy)`
 
 		.map {
 			width: 100%;
-			height: 650px;
+			height: 60%;
 		}
 
 		.infoBox {
 			width: 100%;
-			height: 20%;
+			height: 40%;
 		}
 
-		.infoTitle {
+		.infoDate {
 			margin-bottom: 5px;
 		}
 	}

@@ -8,6 +8,7 @@ const StyledHeader = (props: Props) => {
 	return (
 		<div className={props.className}>
 			<h2 className='title'>{props.label}</h2>
+			<div className='titleMobile'>{props.label}</div>
 			<div className='nav'>
 				<div
 					className={
@@ -17,7 +18,7 @@ const StyledHeader = (props: Props) => {
 					}
 					onClick={() => navigate('/lineadeltempo/')}
 				>
-					linea del tempo
+					timeline
 				</div>
 				<div
 					className={
@@ -53,17 +54,16 @@ export const Header = styled(StyledHeader)`
 	box-sizing: border-box;
 	cursor: default;
 	user-select: none;
-	background-color: orange;
+	background-color: rgb(255, 136, 0);
 
 	.title {
 		font-size: 2em;
 		font-weight: bold;
+		text-shadow: 2px 2px 6px rgb(255, 241, 199);
 	}
 
-	@media only screen and (max-width: 768px) {
-		.title {
-			display: none;
-		}
+	.titleMobile {
+		display: none;
 	}
 
 	.nav {
@@ -81,9 +81,35 @@ export const Header = styled(StyledHeader)`
 
 	.navbutton:hover {
 		color: white;
+		text-shadow: 2px 2px 8px black;
 	}
 
 	.selected {
-		color: #ff0000;
+		color: rgb(255, 241, 199);
+		text-shadow: 2px 2px 5px black;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.title {
+			display: none;
+		}
+
+		.titleMobile {
+			display: block;
+			font-size: 1em;
+			font-weight: bold;
+			margin-right: 5px;
+			text-align: center;
+			padding: 10px;
+			text-shadow: 2px 2px 6px rgb(255, 241, 199);
+		}
+
+		.navbutton {
+			border-left: 0.5px solid gray;
+			border-right: 0;
+			margin-right: 10px;
+			padding-right: 0;
+			padding-left: 10px;
+		}
 	}
 `;

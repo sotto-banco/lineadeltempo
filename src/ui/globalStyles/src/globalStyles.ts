@@ -23,13 +23,35 @@ export const GlobalStyles = createGlobalStyle`
         justify-content: flex-start;
     }
 
+    .tl-text * {
+        color: black !important;
+    }
+
     .tl-timemarker-content-container
  * {
-        color: black !important;
+        color: rgb(50,50,50) !important;
+        background-color: white;
     }
 
     /* .tl-timemarker-content-container
  *:hover {
         color: orange !important;
     } */
+
+    .tl-slidenav-content-container * {
+        color: black !important;
+        
+    }
+
+    .tl-slidenav-title {
+        opacity: 0.6 !important;
+    }
+
+    .tl-slidenav-description {
+        opacity: 0.6 !important;
+    }
+
+    .tl-slidenav-content-container:hover * {
+        opacity: 1 !important;
+    }
 `;
