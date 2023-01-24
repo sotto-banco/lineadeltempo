@@ -56,32 +56,9 @@
             "month": 6,
             "day": 28
         },
-        "end_date": {
-            "year": 1918,
-            "month": 11,
-            "day": 3
-        },
-        "text": {
-            "headline": "I Guerra Mondiale",
-            "text": "Schieramenti:<br /><strong>Alleanza</strong>:<br />- Inghilterra<br />- Francia<br />- Russia<br />- Italia<br />- Stati Uniti<br /><strong>Asse</strong>:<br />- Germania<br />- Austria-Ungheria<br />- Impero Ottomano<br />- Bulgaria<br />- Giappone<br />"
-        },
-        "display_date": "1914-1918",
-        "group": "Storia",
-        "media": {
-            "url": "https://i.postimg.cc/Vk8SbMrd/vesuvio.jpg",
-            "alt": "test",
-            "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
-        }
-    },
-    {
-        "start_date": {
-            "year": 1914,
-            "month": 6,
-            "day": 28
-        },
         "text": {
             "headline": "Assassinio di Francesco Ferdinando",
-            "text": "L'erede al trono dell'impero, <strong>Francesco Ferdinando</strong>, e sua moglie Sofia a Sarajevo da Gavrilo Princip, un giovane serbo. La morte di Ferdinando scatena la guerra."
+            "text": "L'erede al trono dell'impero, <strong>Francesco Ferdinando</strong>, e sua moglie Sofia a Sarajevo da Gavrilo Princip, un giovane serbo. La morte di Ferdinando scatena la I Guerra Mondiale.<br />Schieramenti:<br /><strong>Alleanza</strong>:<br />- Inghilterra<br />- Francia<br />- Russia<br />- Italia<br />- Stati Uniti<br /><strong>Asse</strong>:<br />- Germania<br />- Austria-Ungheria<br />- Impero Ottomano<br />- Bulgaria<br />- Giappone<br />"
         },
         "display_date": "28 Giugno 1914",
         "group": "Storia",
@@ -105,7 +82,7 @@
         },
         "text": {
             "headline": "L'Italia dichiara guerra all'Austria-Ungheria",
-            "text": "L'Italia dichiarò guerra all'Austria ed entrò così nella Prima Guerra Mondiale."
+            "text": "L'Italia dichiarò guerra all'Austria ed entrò così nella I Guerra Mondiale."
         },
         "display_date": "24 Maggio 1915",
         "group": "Storia",
@@ -284,27 +261,6 @@
     },
     {
         "text": {
-            "headline": "II Guerra Mondiale",
-            "text": "Schieramenti:<br /><strong>Alleati</strong>: Stati Uniti, Gran Bretagna, Francia.<br /><strong>Asse</strong>: Germania, Italia, Giappone."
-        },
-        "display_date": "1939-1945",
-        "group": "Storia",
-        "start_date": {
-            "year": 1939,
-            "month": 9,
-            "day": 1
-        },
-        "end_date": {
-            "year": 1945
-        },
-        "media": {
-            "url": "https://i.postimg.cc/Vk8SbMrd/vesuvio.jpg",
-            "alt": "test",
-            "thumbnail": "https://i.postimg.cc/50fxgq5R/time.png"
-        }
-    },
-    {
-        "text": {
             "headline": "Inizio II Guerra Mondiale",
             "text": "<strong>Causa</strong>: invasione della Germania della Polonia.<br />"
         },
@@ -325,6 +281,30 @@
     "eras": [
         {
             "start_date": {
+                "year": 1870
+            },
+            "end_date": {
+                "year": 1945
+            },
+            "text": {
+                "headline": "II Rivoluzione Industriale",
+                "text": ""
+            }
+        },
+        {
+            "start_date": {
+                "year": 1880
+            },
+            "end_date": {
+                "year": 1914
+            },
+            "text": {
+                "headline": "Imperialismo",
+                "text": ""
+            }
+        },
+        {
+            "start_date": {
                 "year": 1914,
                 "month": 6,
                 "day": 28
@@ -336,7 +316,21 @@
             },
             "text": {
                 "headline": "I Guerra Mondiale",
-                "text": "Schieramenti:<br /><strong>Alleanza</strong>:<br />- Inghilterra<br />- Francia<br />- Russia<br />- Italia<br />- Stati Uniti<br /><strong>Asse</strong>:<br />- Germania<br />- Austria-Ungheria<br />- Impero Ottomano<br />- Bulgaria<br />- Giappone<br />"
+                "text": ""
+            }
+        },
+        {
+            "start_date": {
+                "year": 1939,
+                "month": 9,
+                "day": 1
+            },
+            "end_date": {
+                "year": 1945
+            },
+            "text": {
+                "headline": "II Guerra Mondiale",
+                "text": ""
             }
         }
     ]

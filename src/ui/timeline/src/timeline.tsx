@@ -21,7 +21,8 @@ const Dummy = (props: Props) => {
 				marker_height_min: 30,
 				use_bc: true,
 				duration: 500,
-				track_events: ['nav_next', 'nav_previous']
+				track_events: ['nav_next', 'nav_previous'],
+				optimal_tick_width: 120
 			}
 		);
 	}, []);

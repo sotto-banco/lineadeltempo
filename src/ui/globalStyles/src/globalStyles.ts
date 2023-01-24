@@ -54,4 +54,8 @@ export const GlobalStyles = createGlobalStyle`
     .tl-slidenav-content-container:hover * {
         opacity: 1 !important;
     }
+
+    .tl-timeaxis * {
+        color: rgb(100, 100, 100) !important;
+    }
 `;
