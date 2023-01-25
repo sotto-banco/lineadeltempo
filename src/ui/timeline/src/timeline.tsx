@@ -19,16 +19,21 @@ const Dummy = (props: Props) => {
 					}
 				},
 				events: timelineData.events.map(e => {
-					return {
-						...e,
-						media: {
-							...e.media,
-							thumbnail: require('../../../data/media/'.concat(
-								e.media.thumbnail
-							)),
-							url: require('../../../data/media/'.concat(e.media.url))
-						}
-					};
+					let parsed: any = { ...e };
+
+					if (e.media)
+						parsed = {
+							...parsed,
+							media: {
+								alt: e.media.alt,
+								thumbnail: require('../../../data/media/'.concat(
+									e.media.thumbnail
+								)),
+								url: require('../../../data/media/'.concat(e.media.url))
+							}
+						};
+
+					return parsed;
 				}),
 				eras: timelineData.eras
 			},

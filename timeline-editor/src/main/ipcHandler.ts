@@ -1,5 +1,11 @@
 import { IpcMain } from 'electron';
-import { getDataJsonPath, getEvents, getTitle, setTitle } from './store';
+import {
+  getDataJsonPath,
+  getEvents,
+  getTitle,
+  setEvents,
+  setTitle,
+} from './store';
 import fs from 'fs';
 
 export const ipcHandler = (ipcMain: IpcMain) => {
@@ -45,6 +51,6 @@ export const ipcHandler = (ipcMain: IpcMain) => {
       data.events = arg[0];
       fs.writeFileSync(dataJson, JSON.stringify(data, null, 4));
     }
-    setTitle(arg[0]);
+    setEvents(arg[0]);
   });
 };

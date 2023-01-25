@@ -6,7 +6,7 @@ import { Text } from 'renderer/ui/text';
 import styled from 'styled-components';
 import { Props } from './types';
 
-const EMPTY_EVENT = {
+const EMPTY_EVENT: EventObject = {
   autolink: true,
   media: {
     alt: '',
@@ -16,18 +16,19 @@ const EMPTY_EVENT = {
   display_date: '',
   start_date: {
     year: 0,
-    month: 1,
-    day: 1,
   },
   end_date: {
     year: 0,
-    month: 1,
-    day: 1,
   },
   group: '',
   text: {
     headline: 'NUOVO',
     text: '',
+  },
+  coords: {
+    title: '',
+    lon: 0,
+    lat: 0,
   },
 };
 
@@ -38,7 +39,11 @@ const Dummy = (props: Props) => {
   useEffect(() => {
     window.electron.ipcRenderer.sendMessage('get-events', ['events-page']);
     window.electron.ipcRenderer.on('got-events', (events: EventObject[]) => {
-      setStoredEvents(events);
+      setStoredEvents(
+        events
+          .sort((a, b) => a.start_date.year - b.start_date.year)
+          .concat(EMPTY_EVENT)
+      );
     });
     return () => {
       window.electron.ipcRenderer.removeListener('got-events');
@@ -59,7 +64,9 @@ const Dummy = (props: Props) => {
                         ? 'eventsListItem selectedListItem'
                         : 'eventsListItem'
                     }
-                    onClick={() => setSelectedItem(idx)}
+                    onClick={() => {
+                      setSelectedItem(idx);
+                    }}
                   >
                     {e.display_date}
                     <br />
@@ -135,9 +142,13 @@ const Dummy = (props: Props) => {
                   <Input
                     date
                     label="mese"
-                    value={storedEvents[
-                      selectedItem
-                    ].start_date.month!.toString()}
+                    value={
+                      storedEvents[selectedItem].start_date.month
+                        ? storedEvents[
+                            selectedItem
+                          ].start_date.month!.toString()
+                        : ''
+                    }
                     change={(v) =>
                       setStoredEvents(
                         storedEvents.map((e, idx) => {
@@ -157,9 +168,11 @@ const Dummy = (props: Props) => {
                   <Input
                     date
                     label="giorno"
-                    value={storedEvents[
-                      selectedItem
-                    ].start_date.day!.toString()}
+                    value={
+                      storedEvents[selectedItem].start_date.day
+                        ? storedEvents[selectedItem].start_date.day!.toString()
+                        : ''
+                    }
                     change={(v) =>
                       setStoredEvents(
                         storedEvents.map((e, idx) => {
@@ -184,17 +197,19 @@ const Dummy = (props: Props) => {
                   <Input
                     date
                     label="anno"
-                    value={storedEvents[
-                      selectedItem
-                    ].start_date.year.toString()}
+                    value={
+                      storedEvents[selectedItem].end_date?.year
+                        ? storedEvents[selectedItem].end_date!.year.toString()
+                        : ''
+                    }
                     change={(v) =>
                       setStoredEvents(
                         storedEvents.map((e, idx) => {
                           if (idx === selectedItem)
                             return {
                               ...e,
-                              start_date: {
-                                ...e.start_date,
+                              end_date: {
+                                ...e.end_date,
                                 year: parseInt(v),
                               },
                             };
@@ -206,17 +221,19 @@ const Dummy = (props: Props) => {
                   <Input
                     date
                     label="mese"
-                    value={storedEvents[
-                      selectedItem
-                    ].start_date.month!.toString()}
+                    value={
+                      storedEvents[selectedItem].end_date?.month
+                        ? storedEvents[selectedItem].end_date!.month!.toString()
+                        : ''
+                    }
                     change={(v) =>
                       setStoredEvents(
                         storedEvents.map((e, idx) => {
                           if (idx === selectedItem)
                             return {
                               ...e,
-                              start_date: {
-                                ...e.start_date,
+                              end_date: {
+                                ...e.end_date!,
                                 month: parseInt(v),
                               },
                             };
@@ -228,17 +245,19 @@ const Dummy = (props: Props) => {
                   <Input
                     date
                     label="giorno"
-                    value={storedEvents[
-                      selectedItem
-                    ].start_date.day!.toString()}
+                    value={
+                      storedEvents[selectedItem].end_date?.day
+                        ? storedEvents[selectedItem].end_date!.day!.toString()
+                        : ''
+                    }
                     change={(v) =>
                       setStoredEvents(
                         storedEvents.map((e, idx) => {
                           if (idx === selectedItem)
                             return {
                               ...e,
-                              start_date: {
-                                ...e.start_date,
+                              end_date: {
+                                ...e.end_date!,
                                 day: parseInt(v),
                               },
                             };
@@ -379,7 +398,75 @@ const Dummy = (props: Props) => {
               label="salva"
               click={() =>
                 window.electron.ipcRenderer.sendMessage('set-events', [
-                  storedEvents,
+                  storedEvents
+                    .filter((e) => e.text.headline !== 'NUOVO')
+                    .map((e) => {
+                      let pruned: any = {
+                        autolink: true,
+                        display_date: e.display_date,
+                        start_date: { year: e.start_date.year },
+                        text: { ...e.text },
+                      };
+                      if (e.coords && e.coords.title !== '')
+                        pruned = {
+                          ...pruned,
+                          coords: { title: e.coords.title },
+                        };
+                      if (e.coords?.lat)
+                        pruned = {
+                          ...pruned,
+                          coords: { ...pruned.coords, lat: e.coords.lat },
+                        };
+                      if (e.coords?.lon)
+                        pruned = {
+                          ...pruned,
+                          coords: { ...pruned.coords, lon: e.coords.lon },
+                        };
+
+                      if (e.start_date.month)
+                        pruned = {
+                          ...pruned,
+                          start_date: {
+                            ...pruned.start_date,
+                            month: e.start_date.month,
+                          },
+                        };
+
+                      if (e.start_date.day)
+                        pruned = {
+                          ...pruned,
+                          start_date: {
+                            ...pruned.start_date,
+                            day: e.start_date.day,
+                          },
+                        };
+
+                      if (e.end_date && e.end_date.year)
+                        pruned = {
+                          ...pruned,
+                          end_date: { year: e.end_date.year },
+                        };
+                      if (e.end_date?.month)
+                        pruned = {
+                          ...pruned,
+                          end_date: {
+                            ...pruned.end_date,
+                            month: e.end_date.month,
+                          },
+                        };
+                      if (e.end_date?.day)
+                        pruned = {
+                          ...pruned,
+                          end_date: { ...pruned.end_date, day: e.end_date.day },
+                        };
+
+                      if (e.group) pruned = { ...pruned, group: e.group };
+
+                      if (e.media && e.media.url !== '')
+                        pruned = { ...pruned, media: { ...e.media } };
+
+                      return pruned;
+                    }),
                 ])
               }
             />

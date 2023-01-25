@@ -95,7 +95,7 @@ const dataSchema: Schema<Data> = {
       },
     },
     default: {},
-    required: ['text', 'media'],
+    required: ['text'],
   },
   events: {
     type: 'array',
@@ -109,19 +109,16 @@ const dataSchema: Schema<Data> = {
               type: 'number',
               minimum: 1,
               maximum: 9999,
-              default: 2020,
             },
             month: {
               type: 'number',
               minimum: 1,
               maximum: 12,
-              default: 1,
             },
             day: {
               type: 'number',
               minimum: 1,
               maximum: 31,
-              default: 1,
             },
           },
           default: {},
@@ -134,23 +131,20 @@ const dataSchema: Schema<Data> = {
               type: 'number',
               minimum: 1,
               maximum: 9999,
-              default: 2020,
             },
             month: {
               type: 'number',
               minimum: 1,
               maximum: 12,
-              default: 1,
             },
             day: {
               type: 'number',
               minimum: 1,
               maximum: 31,
-              default: 1,
             },
           },
           default: {},
-          required: ['year'],
+          required: [],
         },
         display_date: {
           type: 'string',
@@ -235,19 +229,16 @@ const dataSchema: Schema<Data> = {
               type: 'number',
               minimum: 1,
               maximum: 9999,
-              default: 2020,
             },
             month: {
               type: 'number',
               minimum: 1,
               maximum: 12,
-              default: 1,
             },
             day: {
               type: 'number',
               minimum: 1,
               maximum: 31,
-              default: 1,
             },
           },
           default: {},
@@ -260,19 +251,16 @@ const dataSchema: Schema<Data> = {
               type: 'number',
               minimum: 1,
               maximum: 9999,
-              default: 2020,
             },
             month: {
               type: 'number',
               minimum: 1,
               maximum: 12,
-              default: 1,
             },
             day: {
               type: 'number',
               minimum: 1,
               maximum: 31,
-              default: 1,
             },
           },
           default: {},
@@ -318,6 +306,7 @@ export const getTitle = () => {
       store.set('eras', dataJson.eras);
       return store.get('title');
     } catch (error) {
+      console.log(error);
       return null;
     }
   }
