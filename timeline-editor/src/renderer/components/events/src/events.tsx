@@ -8,6 +8,7 @@ import { Props } from './types';
 
 const Dummy = (props: Props) => {
   const [storedEvents, setStoredEvents] = useState<EventObject[] | null>();
+  const [selectedItem, setSelectedItem] = useState<number>(0);
 
   useEffect(() => {
     window.electron.ipcRenderer.sendMessage('get-events', ['events-page']);
@@ -22,29 +23,46 @@ const Dummy = (props: Props) => {
   return (
     <div className={props.className}>
       {storedEvents && (
-        <div className="formContainer">
-          <div className="eventsList">
-            {storedEvents.map((e, idx) => {
-              return (
-                <div key={idx} className="eventsListItem">
-                  {e.text.headline}
-                </div>
-              );
-            })}
+        <div className="eventsContainer">
+          <div className="formContainer">
+            <div className="eventsList">
+              {storedEvents.map((e, idx) => {
+                return (
+                  <div
+                    key={idx}
+                    className={
+                      selectedItem === idx
+                        ? 'eventsListItem selectedListItem'
+                        : 'eventsListItem'
+                    }
+                    onClick={() => setSelectedItem(idx)}
+                  >
+                    {e.display_date}
+                    <br />
+                    {e.text.headline}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="selectedEventEditor">
+              {
+                storedEvents.filter((e, idx) => idx === selectedItem)[0].text
+                  .headline
+              }
+            </div>
           </div>
-          <div className="selectedEventEditor"></div>
+          <div className="footer">
+            <Button
+              label="salva"
+              click={() =>
+                window.electron.ipcRenderer.sendMessage('set-events', [
+                  storedEvents,
+                ])
+              }
+            />
+          </div>
         </div>
       )}
-      <div className="footer">
-        <Button
-          label="salva"
-          click={() =>
-            window.electron.ipcRenderer.sendMessage('set-events', [
-              storedEvents,
-            ])
-          }
-        />
-      </div>
     </div>
   );
 };
@@ -53,9 +71,14 @@ export const Events = styled(Dummy)`
   width: 100%;
   height: 100%;
 
+  .eventsContainer {
+    width: 100%;
+    height: 100%;
+  }
+
   .formContainer {
     width: 100%;
-    height: 92%;
+    height: 90%;
     border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -72,21 +95,31 @@ export const Events = styled(Dummy)`
     flex-direction: column;
     text-align: center;
     overflow-y: auto;
-    padding: 10px 0;
   }
 
   .eventsListItem {
     width: 100%;
     border-bottom: 1px solid black;
-    border-radius: 4px;
     text-align: center;
     cursor: default;
     user-select: none;
-    padding: 4px;
+    padding: 6px;
+  }
+
+  .eventsListItem:last-of-type {
+    border-bottom: 0px;
   }
 
   .eventsListItem:hover {
     background-color: #e0e0e0;
+  }
+
+  .selectedListItem {
+    background-color: rgb(255, 165, 0);
+  }
+
+  .selectedListItem:hover {
+    background-color: rgba(255, 165, 0, 0.5);
   }
 
   .selectedEventEditor {
@@ -102,7 +135,7 @@ export const Events = styled(Dummy)`
 
   .footer {
     width: 100%;
-    height: 8%;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: center;

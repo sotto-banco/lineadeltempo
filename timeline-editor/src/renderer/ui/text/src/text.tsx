@@ -4,7 +4,7 @@ import { Props } from './types';
 const Dummy = (props: Props) => {
   return (
     <div className={props.className}>
-      <div className="label">{props.label}:</div>
+      <div className="label">{props.label}</div>
       <textarea
         className="textarea"
         value={props.value}
@@ -24,5 +24,9 @@ export const Text = styled(Dummy)`
   .label {
     font-weight: bold;
     margin-bottom: 5px;
+  }
+
+  .label::after {
+    content: ':';
   }
 `;
