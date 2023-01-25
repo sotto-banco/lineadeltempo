@@ -16,7 +16,7 @@ import {
 	useMapEvents
 } from 'react-leaflet';
 import L from 'leaflet';
-import markerIcon from '../../../media/pics/marker.png';
+import markerIcon from '../../../data/media/marker.png';
 const icon = L.icon({
 	iconUrl: markerIcon,
 	iconSize: [41, 41]

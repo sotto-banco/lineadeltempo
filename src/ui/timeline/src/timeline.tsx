@@ -9,8 +9,27 @@ const Dummy = (props: Props) => {
 		new TL.Timeline(
 			'timeline-embed',
 			{
-				title: timelineData.title,
-				events: timelineData.events,
+				title: {
+					...timelineData.title,
+					media: {
+						...timelineData.title.media,
+						url: require('../../../data/media/'.concat(
+							timelineData.title.media.url
+						))
+					}
+				},
+				events: timelineData.events.map(e => {
+					return {
+						...e,
+						media: {
+							...e.media,
+							thumbnail: require('../../../data/media/'.concat(
+								e.media.thumbnail
+							)),
+							url: require('../../../data/media/'.concat(e.media.url))
+						}
+					};
+				}),
 				eras: timelineData.eras
 			},
 			{
