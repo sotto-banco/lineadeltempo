@@ -78,7 +78,11 @@ const Dummy = (props: DummyProps) => {
 											}
 										}}
 									>
-										<Tooltip>{event.coords.title}</Tooltip>
+										<Tooltip>
+											{event.coords.title}
+											<br />
+											{event.display_date}
+										</Tooltip>
 									</Marker>
 								);
 							} else return null;
