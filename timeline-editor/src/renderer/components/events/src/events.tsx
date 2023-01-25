@@ -6,6 +6,31 @@ import { Text } from 'renderer/ui/text';
 import styled from 'styled-components';
 import { Props } from './types';
 
+const EMPTY_EVENT = {
+  autolink: true,
+  media: {
+    alt: '',
+    thumbnail: '',
+    url: '',
+  },
+  display_date: '',
+  start_date: {
+    year: 0,
+    month: 1,
+    day: 1,
+  },
+  end_date: {
+    year: 0,
+    month: 1,
+    day: 1,
+  },
+  group: '',
+  text: {
+    headline: 'NUOVO',
+    text: '',
+  },
+};
+
 const Dummy = (props: Props) => {
   const [storedEvents, setStoredEvents] = useState<EventObject[] | null>();
   const [selectedItem, setSelectedItem] = useState<number>(0);
@@ -14,7 +39,6 @@ const Dummy = (props: Props) => {
     window.electron.ipcRenderer.sendMessage('get-events', ['events-page']);
     window.electron.ipcRenderer.on('got-events', (events: EventObject[]) => {
       setStoredEvents(events);
-      console.log(events);
     });
     return () => {
       window.electron.ipcRenderer.removeListener('got-events');
@@ -83,22 +107,271 @@ const Dummy = (props: Props) => {
                   )
                 }
               />
-              <div>
-                <div>data inizio</div>
-                <Input
-                  date
-                  label="anno"
-                  value={storedEvents[selectedItem].group!}
-                  change={(v) =>
-                    setStoredEvents(
-                      storedEvents.map((e, idx) => {
-                        if (idx === selectedItem) return { ...e, group: v };
-                        return e;
-                      })
-                    )
-                  }
-                />
+              <div className="row">
+                <div className="label">data inizio</div>
+                <div className="rowInputs">
+                  <Input
+                    date
+                    label="anno"
+                    value={storedEvents[
+                      selectedItem
+                    ].start_date.year.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              start_date: {
+                                ...e.start_date,
+                                year: parseInt(v),
+                              },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                  <Input
+                    date
+                    label="mese"
+                    value={storedEvents[
+                      selectedItem
+                    ].start_date.month!.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              start_date: {
+                                ...e.start_date,
+                                month: parseInt(v),
+                              },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                  <Input
+                    date
+                    label="giorno"
+                    value={storedEvents[
+                      selectedItem
+                    ].start_date.day!.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              start_date: {
+                                ...e.start_date,
+                                day: parseInt(v),
+                              },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                </div>
               </div>
+              <div className="row">
+                <div className="label">data fine</div>
+                <div className="rowInputs">
+                  <Input
+                    date
+                    label="anno"
+                    value={storedEvents[
+                      selectedItem
+                    ].start_date.year.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              start_date: {
+                                ...e.start_date,
+                                year: parseInt(v),
+                              },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                  <Input
+                    date
+                    label="mese"
+                    value={storedEvents[
+                      selectedItem
+                    ].start_date.month!.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              start_date: {
+                                ...e.start_date,
+                                month: parseInt(v),
+                              },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                  <Input
+                    date
+                    label="giorno"
+                    value={storedEvents[
+                      selectedItem
+                    ].start_date.day!.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              start_date: {
+                                ...e.start_date,
+                                day: parseInt(v),
+                              },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                </div>
+              </div>
+              <Input
+                label="data custom"
+                value={storedEvents[selectedItem].display_date}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem)
+                        return {
+                          ...e,
+                          display_date: v,
+                        };
+                      return e;
+                    })
+                  )
+                }
+              />
+              <div className="row">
+                <div className="label">coordinate</div>
+                <div className="rowInputs">
+                  <Input
+                    label="titolo"
+                    value={storedEvents[selectedItem].coords!.title}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              coords: { ...e.coords!, title: v },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="rowInputs">
+                  <Input
+                    date
+                    label="latitudine"
+                    value={storedEvents[selectedItem].coords!.lat.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              coords: { ...e.coords!, lat: parseFloat(v) },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                  <Input
+                    date
+                    label="longitudine"
+                    value={storedEvents[selectedItem].coords!.lon.toString()}
+                    change={(v) =>
+                      setStoredEvents(
+                        storedEvents.map((e, idx) => {
+                          if (idx === selectedItem)
+                            return {
+                              ...e,
+                              coords: { ...e.coords!, lon: parseFloat(v) },
+                            };
+                          return e;
+                        })
+                      )
+                    }
+                  />
+                </div>
+              </div>
+              <Input
+                label="foto alt"
+                value={storedEvents[selectedItem].media!.alt}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem)
+                        return {
+                          ...e,
+                          media: { ...e.media!, alt: v },
+                        };
+                      return e;
+                    })
+                  )
+                }
+              />
+              <Input
+                label="foto url"
+                value={storedEvents[selectedItem].media!.url}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem)
+                        return {
+                          ...e,
+                          media: { ...e.media!, url: v },
+                        };
+                      return e;
+                    })
+                  )
+                }
+              />
+              <Input
+                label="thumbnail"
+                value={storedEvents[selectedItem].media!.thumbnail}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem)
+                        return {
+                          ...e,
+                          media: { ...e.media!, thumbnail: v },
+                        };
+                      return e;
+                    })
+                  )
+                }
+              />
             </div>
           </div>
           <div className="footer">
@@ -175,12 +448,26 @@ export const Events = styled(Dummy)`
   .selectedEventEditor {
     width: 70%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     overflow-y: scroll;
+    padding: 30px 0;
+  }
+
+  .row {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .rowInputs {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .label {
+    font-weight: bold;
   }
 
   .footer {

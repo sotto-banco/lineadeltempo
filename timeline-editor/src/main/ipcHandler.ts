@@ -37,4 +37,14 @@ export const ipcHandler = (ipcMain: IpcMain) => {
     if (events) event.reply('got-events', events);
     else event.reply('got-data-json-path', false);
   });
+
+  ipcMain.on('set-events', async (event, arg) => {
+    const dataJson = getDataJsonPath();
+    if (dataJson !== '') {
+      const data = JSON.parse(fs.readFileSync(dataJson, 'utf8'));
+      data.events = arg[0];
+      fs.writeFileSync(dataJson, JSON.stringify(data, null, 4));
+    }
+    setTitle(arg[0]);
+  });
 };
