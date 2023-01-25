@@ -9,7 +9,7 @@ const Dummy = (props: Props) => {
         className="input"
         value={props.value}
         onChange={(e) => props.change(e.currentTarget.value)}
-        size={50}
+        size={props.date ? 4 : 50}
       />
     </div>
   );

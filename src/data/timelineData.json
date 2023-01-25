@@ -16,11 +16,7 @@
 			},
 			"display_date": "1870",
 			"autolink": true,
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": {
 				"lat": 51.507359,
 				"lon": -0.136439,
@@ -35,11 +31,7 @@
 				"text": "Imporre, da parte di una nazione su un'altra, il proprio dominio economico e politico al fine di creare degli imperi economici molto potenti. I <strong>protagonisti</strong> sono: Francia, Germania, Inghilterra."
 			},
 			"display_date": "1880",
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			}
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" }
 		},
 		{
 			"start_date": { "year": 1914, "month": 6, "day": 28 },
@@ -49,11 +41,7 @@
 			},
 			"display_date": "28 Giugno 1914",
 			"group": "Storia",
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": {
 				"lat": 43.856258,
 				"lon": 18.413076,
@@ -68,11 +56,7 @@
 			},
 			"display_date": "24 Maggio 1915",
 			"group": "Storia",
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			}
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" }
 		},
 		{
 			"start_date": { "year": 1918, "month": 11, "day": 3 },
@@ -82,11 +66,7 @@
 			},
 			"display_date": "3 Novembre 1918",
 			"group": "Storia",
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": {
 				"lat": 45.464203,
 				"lon": 9.189982,
@@ -101,11 +81,7 @@
 			},
 			"display_date": "28 Giugno 1919",
 			"group": "Storia",
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": {
 				"lat": 48.856614,
 				"lon": 2.352222,
@@ -120,11 +96,7 @@
 			"display_date": "27 Ottobre 1922",
 			"group": "Storia",
 			"start_date": { "year": 1922, "month": 10, "day": 27 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": { "lat": 41.9027, "lon": 12.496366, "title": "Marcia su Roma" }
 		},
 		{
@@ -135,11 +107,7 @@
 			"display_date": "10 Luglio 1924",
 			"group": "Storia",
 			"start_date": { "year": 1924, "month": 7, "day": 10 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": {
 				"lat": 41.902782,
 				"lon": 12.4963,
@@ -154,33 +122,21 @@
 			"display_date": "1925",
 			"group": "Storia",
 			"start_date": { "year": 1925 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			}
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" }
 		},
 		{
 			"text": { "headline": "Hitler sale al potere in Germania", "text": "" },
 			"display_date": "1932",
 			"group": "Storia",
 			"start_date": { "year": 1932 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			}
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" }
 		},
 		{
 			"text": { "headline": "Promulgazione delle leggi razziali", "text": "" },
 			"display_date": "1935",
 			"group": "Storia",
 			"start_date": { "year": 1935 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			}
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" }
 		},
 		{
 			"text": {
@@ -190,11 +146,7 @@
 			"display_date": "9-10 Novembre 1938",
 			"group": "Storia",
 			"start_date": { "year": 1938, "month": 11, "day": 9 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			},
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" },
 			"coords": {
 				"lat": 52.520008,
 				"lon": 13.404954,
@@ -209,11 +161,7 @@
 			"display_date": "1 Settembre 1939",
 			"group": "Storia",
 			"start_date": { "year": 1939, "month": 9, "day": 1 },
-			"media": {
-				"url": "test.png",
-				"alt": "test",
-				"thumbnail": "time.png"
-			}
+			"media": { "url": "test.png", "alt": "test", "thumbnail": "time.png" }
 		}
 	],
 	"eras": [

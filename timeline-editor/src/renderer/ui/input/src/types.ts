@@ -3,4 +3,5 @@ export interface Props {
   label: string;
   value: string;
   change: (value: string) => void;
+  date?: boolean;
 }

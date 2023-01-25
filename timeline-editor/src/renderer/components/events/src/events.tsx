@@ -45,10 +45,60 @@ const Dummy = (props: Props) => {
               })}
             </div>
             <div className="selectedEventEditor">
-              {
-                storedEvents.filter((e, idx) => idx === selectedItem)[0].text
-                  .headline
-              }
+              <Input
+                label="titolo"
+                value={storedEvents[selectedItem].text.headline}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem)
+                        return { ...e, text: { ...e.text, headline: v } };
+                      return e;
+                    })
+                  )
+                }
+              />
+              <Text
+                label="testo"
+                value={storedEvents[selectedItem].text.text}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem)
+                        return { ...e, text: { ...e.text, text: v } };
+                      return e;
+                    })
+                  )
+                }
+              />
+              <Input
+                label="gruppo"
+                value={storedEvents[selectedItem].group!}
+                change={(v) =>
+                  setStoredEvents(
+                    storedEvents.map((e, idx) => {
+                      if (idx === selectedItem) return { ...e, group: v };
+                      return e;
+                    })
+                  )
+                }
+              />
+              <div>
+                <div>data inizio</div>
+                <Input
+                  date
+                  label="anno"
+                  value={storedEvents[selectedItem].group!}
+                  change={(v) =>
+                    setStoredEvents(
+                      storedEvents.map((e, idx) => {
+                        if (idx === selectedItem) return { ...e, group: v };
+                        return e;
+                      })
+                    )
+                  }
+                />
+              </div>
             </div>
           </div>
           <div className="footer">
