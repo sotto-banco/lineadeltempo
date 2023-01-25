@@ -113,7 +113,7 @@ export const MapPage = styled(Dummy)`
 
 	.mapContainer {
 		width: 100%;
-		height: 100%;
+		height: 90%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -137,7 +137,7 @@ export const MapPage = styled(Dummy)`
 
 	.infoBox {
 		width: 20%;
-		height: 700px;
+		height: 90%;
 		display: flex;
 		flex-direction: column;
 		padding: 20px;
