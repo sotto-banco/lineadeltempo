@@ -16,7 +16,8 @@ export type Channels =
   | 'set-events'
   | 'get-eras'
   | 'got-eras'
-  | 'set-eras';
+  | 'set-eras'
+  | 'error';
 
 const electronHandler = {
   ipcRenderer: {

@@ -1,4 +1,4 @@
-import { EventObject, TitleObject } from 'main/store';
+import { EventObject } from 'main/store';
 import { useEffect, useState } from 'react';
 import { Button } from 'renderer/ui/button';
 import { Input } from 'renderer/ui/input';
@@ -30,6 +30,78 @@ const EMPTY_EVENT: EventObject = {
     lon: 0,
     lat: 0,
   },
+};
+
+const pruneEvents = (toPrune: EventObject[]) => {
+  return toPrune
+    .filter((e) => e.text.headline !== 'NUOVO')
+    .map((e) => {
+      let pruned: any = {
+        autolink: true,
+        display_date: e.display_date,
+        start_date: { year: e.start_date.year },
+        text: { ...e.text },
+      };
+      if (e.coords && e.coords.title !== '')
+        pruned = {
+          ...pruned,
+          coords: { title: e.coords.title },
+        };
+      if (e.coords?.lat)
+        pruned = {
+          ...pruned,
+          coords: { ...pruned.coords, lat: e.coords.lat },
+        };
+      if (e.coords?.lon)
+        pruned = {
+          ...pruned,
+          coords: { ...pruned.coords, lon: e.coords.lon },
+        };
+
+      if (e.start_date.month)
+        pruned = {
+          ...pruned,
+          start_date: {
+            ...pruned.start_date,
+            month: e.start_date.month,
+          },
+        };
+
+      if (e.start_date.day)
+        pruned = {
+          ...pruned,
+          start_date: {
+            ...pruned.start_date,
+            day: e.start_date.day,
+          },
+        };
+
+      if (e.end_date && e.end_date.year)
+        pruned = {
+          ...pruned,
+          end_date: { year: e.end_date.year },
+        };
+      if (e.end_date?.month)
+        pruned = {
+          ...pruned,
+          end_date: {
+            ...pruned.end_date,
+            month: e.end_date.month,
+          },
+        };
+      if (e.end_date?.day)
+        pruned = {
+          ...pruned,
+          end_date: { ...pruned.end_date, day: e.end_date.day },
+        };
+
+      if (e.group) pruned = { ...pruned, group: e.group };
+
+      if (e.media && e.media.url !== '')
+        pruned = { ...pruned, media: { ...e.media } };
+
+      return pruned;
+    });
 };
 
 const Dummy = (props: Props) => {
@@ -68,15 +140,33 @@ const Dummy = (props: Props) => {
                       setSelectedItem(idx);
                     }}
                   >
-                    {e.display_date}
+                    <div className="smaller">{e.display_date}</div>
                     <br />
-                    {e.text.headline}
+                    <div>{e.text.headline}</div>
                   </div>
                 );
               })}
             </div>
             <div className="selectedEventEditor">
+              {storedEvents.length !== selectedItem + 1 && (
+                <div
+                  className="deleteButton"
+                  onClick={() => {
+                    const isToDelete = confirm("Vuoi eliminare l'evento?");
+                    if (isToDelete) {
+                      window.electron.ipcRenderer.sendMessage('set-events', [
+                        pruneEvents(storedEvents).filter(
+                          (_, i) => i !== selectedItem
+                        ),
+                      ]);
+                    }
+                  }}
+                >
+                  x
+                </div>
+              )}
               <Input
+                required
                 label="titolo"
                 value={storedEvents[selectedItem].text.headline}
                 change={(v) =>
@@ -118,6 +208,7 @@ const Dummy = (props: Props) => {
                 <div className="label">data inizio</div>
                 <div className="rowInputs">
                   <Input
+                    required
                     date
                     label="anno"
                     value={storedEvents[
@@ -269,6 +360,7 @@ const Dummy = (props: Props) => {
                 </div>
               </div>
               <Input
+                required
                 label="data custom"
                 value={storedEvents[selectedItem].display_date}
                 change={(v) =>
@@ -398,75 +490,7 @@ const Dummy = (props: Props) => {
               label="salva"
               click={() =>
                 window.electron.ipcRenderer.sendMessage('set-events', [
-                  storedEvents
-                    .filter((e) => e.text.headline !== 'NUOVO')
-                    .map((e) => {
-                      let pruned: any = {
-                        autolink: true,
-                        display_date: e.display_date,
-                        start_date: { year: e.start_date.year },
-                        text: { ...e.text },
-                      };
-                      if (e.coords && e.coords.title !== '')
-                        pruned = {
-                          ...pruned,
-                          coords: { title: e.coords.title },
-                        };
-                      if (e.coords?.lat)
-                        pruned = {
-                          ...pruned,
-                          coords: { ...pruned.coords, lat: e.coords.lat },
-                        };
-                      if (e.coords?.lon)
-                        pruned = {
-                          ...pruned,
-                          coords: { ...pruned.coords, lon: e.coords.lon },
-                        };
-
-                      if (e.start_date.month)
-                        pruned = {
-                          ...pruned,
-                          start_date: {
-                            ...pruned.start_date,
-                            month: e.start_date.month,
-                          },
-                        };
-
-                      if (e.start_date.day)
-                        pruned = {
-                          ...pruned,
-                          start_date: {
-                            ...pruned.start_date,
-                            day: e.start_date.day,
-                          },
-                        };
-
-                      if (e.end_date && e.end_date.year)
-                        pruned = {
-                          ...pruned,
-                          end_date: { year: e.end_date.year },
-                        };
-                      if (e.end_date?.month)
-                        pruned = {
-                          ...pruned,
-                          end_date: {
-                            ...pruned.end_date,
-                            month: e.end_date.month,
-                          },
-                        };
-                      if (e.end_date?.day)
-                        pruned = {
-                          ...pruned,
-                          end_date: { ...pruned.end_date, day: e.end_date.day },
-                        };
-
-                      if (e.group) pruned = { ...pruned, group: e.group };
-
-                      if (e.media && e.media.url !== '')
-                        pruned = { ...pruned, media: { ...e.media } };
-
-                      return pruned;
-                    }),
+                  pruneEvents(storedEvents),
                 ])
               }
             />
@@ -555,6 +579,25 @@ export const Events = styled(Dummy)`
 
   .label {
     font-weight: bold;
+  }
+
+  .smaller {
+    font-size: small;
+    font-weight: bold;
+  }
+
+  .deleteButton {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .deleteButton:hover {
+    background-color: orange;
   }
 
   .footer {

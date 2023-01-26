@@ -1,6 +1,7 @@
 import { IpcMain } from 'electron';
 import {
   getDataJsonPath,
+  getEras,
   getEvents,
   getTitle,
   setEvents,
@@ -50,7 +51,17 @@ export const ipcHandler = (ipcMain: IpcMain) => {
       const data = JSON.parse(fs.readFileSync(dataJson, 'utf8'));
       data.events = arg[0];
       fs.writeFileSync(dataJson, JSON.stringify(data, null, 4));
+      setEvents(arg[0]);
+      const events = getEvents();
+      if (events) event.reply('got-events', events);
+    } else {
+      event.reply('error', 'set-events failed');
     }
-    setEvents(arg[0]);
+  });
+
+  ipcMain.on('get-eras', (event) => {
+    const eras = getEras();
+    if (eras) event.reply('got-eras', eras);
+    else event.reply('got-data-json-path', false);
   });
 };

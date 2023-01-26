@@ -43,7 +43,7 @@ export interface EventObject {
   coords?: CoordsObject;
 }
 
-interface Era {
+export interface EraObject {
   start_date: DateObject;
   end_date: DateObject;
   text: TextObject;
@@ -54,7 +54,7 @@ interface Era {
 interface Data {
   title: TitleObject;
   events: EventObject[];
-  eras: Era[];
+  eras: EraObject[];
   dataJsonPath: string;
 }
 
@@ -331,6 +331,6 @@ export const getDataJsonPath = () => store.get('dataJsonPath');
 
 export const setTitle = (title: TitleObject) => store.set('title', title);
 export const setEvents = (events: EventObject[]) => store.set('events', events);
-export const setEras = (eras: Era[]) => store.set('eras', eras);
+export const setEras = (eras: EraObject[]) => store.set('eras', eras);
 export const setDataJsonPath = (path: string) =>
   store.set('dataJsonPath', path);

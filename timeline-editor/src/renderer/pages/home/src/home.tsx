@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Eras } from 'renderer/components/eras';
 import { Events } from 'renderer/components/events';
 import { Title } from 'renderer/components/title';
 import styled from 'styled-components';
@@ -47,7 +48,7 @@ const Dummy = ({ className }: Props) => {
           <div className="content">
             {selected === 'title' && <Title />}
             {selected === 'events' && <Events />}
-            {selected === 'eras' && <div>epoche</div>}
+            {selected === 'eras' && <Eras />}
           </div>
         </div>
       ) : (

@@ -4,4 +4,5 @@ export interface Props {
   value: string;
   change: (value: string) => void;
   date?: boolean;
+  required?: boolean;
 }
