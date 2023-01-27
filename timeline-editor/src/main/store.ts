@@ -56,6 +56,8 @@ interface Data {
   events: EventObject[];
   eras: EraObject[];
   dataJsonPath: string;
+  projectPath: string;
+  mediaPath: string;
 }
 
 // dataSchema
@@ -291,6 +293,14 @@ const dataSchema: Schema<Data> = {
     type: 'string',
     default: '',
   },
+  projectPath: {
+    type: 'string',
+    default: '',
+  },
+  mediaPath: {
+    type: 'string',
+    default: '',
+  },
 };
 
 const store = new Store<Data>({ schema: dataSchema });
@@ -326,11 +336,20 @@ export const getEvents = () => {
     }
   }
 };
-export const getEras = () => store.get('eras');
 export const getDataJsonPath = () => store.get('dataJsonPath');
+export const setDataJsonPath = (path: string) => {
+  store.set('dataJsonPath', path);
+};
+export const getProjectPath = () => store.get('projectPath');
+export const setProjectPath = (path: string) => {
+  store.set('projectPath', path);
+};
+export const getMediaPath = () => store.get('mediaPath');
+export const setMediaPath = (path: string) => {
+  store.set('mediaPath', path);
+};
 
+export const getEras = () => store.get('eras');
 export const setTitle = (title: TitleObject) => store.set('title', title);
 export const setEvents = (events: EventObject[]) => store.set('events', events);
 export const setEras = (eras: EraObject[]) => store.set('eras', eras);
-export const setDataJsonPath = (path: string) =>
-  store.set('dataJsonPath', path);

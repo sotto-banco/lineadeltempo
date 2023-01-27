@@ -1,3 +1,4 @@
+import { exec } from 'child_process';
 import {
   app,
   Menu,
@@ -6,7 +7,15 @@ import {
   MenuItemConstructorOptions,
   dialog,
 } from 'electron';
-import { setDataJsonPath } from './store';
+import fs from 'fs';
+import path from 'path';
+import {
+  getDataJsonPath,
+  getProjectPath,
+  setDataJsonPath,
+  setProjectPath,
+} from './store';
+import { runChild } from './util';
 
 interface DarwinMenuItemConstructorOptions extends MenuItemConstructorOptions {
   selector?: string;
@@ -207,6 +216,25 @@ export default class MenuBuilder {
             },
           },
           {
+            label: '&reload',
+            accelerator: 'Ctrl+R',
+            click: () => {
+              this.mainWindow.webContents.reload();
+            },
+          },
+          {
+            label: '&close',
+            accelerator: 'Ctrl+W',
+            click: () => {
+              this.mainWindow.close();
+            },
+          },
+        ],
+      },
+      {
+        label: 'File',
+        submenu: [
+          {
             label: 'apri json',
             accelerator: 'Ctrl+O',
             click: () => {
@@ -221,17 +249,56 @@ export default class MenuBuilder {
             },
           },
           {
-            label: '&reload',
-            accelerator: 'Ctrl+R',
+            label: 'aggiorna sito',
+            accelerator: 'Ctrl+S',
             click: () => {
-              this.mainWindow.webContents.reload();
-            },
-          },
-          {
-            label: '&close',
-            accelerator: 'Ctrl+W',
-            click: () => {
-              this.mainWindow.close();
+              const confirmed = dialog.showMessageBoxSync({
+                message: 'Vuoi aggiornare il sito?',
+                buttons: ['conferma', 'annulla'],
+              });
+              if (confirmed === 0) {
+                let projectPath = getProjectPath();
+                let proceed: boolean = false;
+                if (fs.existsSync(projectPath)) {
+                  proceed = true;
+                } else {
+                  const updatedProjectPath = dialog.showOpenDialogSync({
+                    properties: ['openDirectory'],
+                  });
+                  if (updatedProjectPath) {
+                    setProjectPath(updatedProjectPath[0]);
+                    proceed = true;
+                  }
+                }
+
+                if (proceed) {
+                  projectPath = getProjectPath();
+                  const dataJsonPath = getDataJsonPath();
+
+                  fs.copyFileSync(
+                    dataJsonPath,
+                    path.join(
+                      projectPath,
+                      'src',
+                      'data',
+                      path.basename(dataJsonPath)
+                    )
+                  );
+
+                  fs.cpSync(
+                    path.join(path.dirname(dataJsonPath), 'media'),
+                    path.join(projectPath, 'src', 'data', 'media'),
+                    { recursive: true }
+                  );
+
+                  runChild('git add --a', projectPath);
+                  runChild('git commit -m timeline-editor', projectPath);
+                  runChild('git push', projectPath);
+
+                  runChild('npm run deploy', projectPath);
+                  dialog.showMessageBox({ message: 'sito aggiornato' });
+                }
+              }
             },
           },
         ],
