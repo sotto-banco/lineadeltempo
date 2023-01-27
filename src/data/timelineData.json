@@ -281,6 +281,17 @@
                 "alt": "test",
                 "thumbnail": "time.png"
             }
+        },
+        {
+            "autolink": true,
+            "display_date": "1950",
+            "start_date": {
+                "year": 1950
+            },
+            "text": {
+                "headline": "Test",
+                "text": ""
+            }
         }
     ],
     "eras": [
