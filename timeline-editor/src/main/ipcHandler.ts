@@ -4,6 +4,7 @@ import {
   getEras,
   getEvents,
   getTitle,
+  setEras,
   setEvents,
   setTitle,
 } from './store';
@@ -25,8 +26,10 @@ export const ipcHandler = (ipcMain: IpcMain) => {
   ipcMain.on('set-title', async (event, arg) => {
     const dataJson = getDataJsonPath();
     if (dataJson !== '') {
-      const data = JSON.parse(fs.readFileSync(dataJson, 'utf8'));
-      data.title = arg[0];
+      const data = {
+        ...JSON.parse(fs.readFileSync(dataJson, 'utf8')),
+        title: arg[0],
+      };
       fs.writeFileSync(dataJson, JSON.stringify(data));
     }
     setTitle(arg[0]);
@@ -48,8 +51,10 @@ export const ipcHandler = (ipcMain: IpcMain) => {
   ipcMain.on('set-events', async (event, arg) => {
     const dataJson = getDataJsonPath();
     if (dataJson !== '') {
-      const data = JSON.parse(fs.readFileSync(dataJson, 'utf8'));
-      data.events = arg[0];
+      const data = {
+        ...JSON.parse(fs.readFileSync(dataJson, 'utf8')),
+        events: arg[0],
+      };
       fs.writeFileSync(dataJson, JSON.stringify(data, null, 4));
       setEvents(arg[0]);
       const events = getEvents();
@@ -63,5 +68,21 @@ export const ipcHandler = (ipcMain: IpcMain) => {
     const eras = getEras();
     if (eras) event.reply('got-eras', eras);
     else event.reply('got-data-json-path', false);
+  });
+
+  ipcMain.on('set-eras', async (era, arg) => {
+    const dataJson = getDataJsonPath();
+    if (dataJson !== '') {
+      const data = {
+        ...JSON.parse(fs.readFileSync(dataJson, 'utf8')),
+        eras: arg[0],
+      };
+      fs.writeFileSync(dataJson, JSON.stringify(data, null, 4));
+      setEras(arg[0]);
+      const eras = getEras();
+      if (eras) era.reply('got-eras', eras);
+    } else {
+      era.reply('error', 'set-eras failed');
+    }
   });
 };

@@ -107,7 +107,7 @@ const dataSchema: Schema<Data> = {
           properties: {
             year: {
               type: 'number',
-              minimum: 1,
+              minimum: -9999,
               maximum: 9999,
             },
             month: {
@@ -129,7 +129,7 @@ const dataSchema: Schema<Data> = {
           properties: {
             year: {
               type: 'number',
-              minimum: 1,
+              minimum: -9999,
               maximum: 9999,
             },
             month: {
@@ -227,7 +227,7 @@ const dataSchema: Schema<Data> = {
           properties: {
             year: {
               type: 'number',
-              minimum: 1,
+              minimum: -9999,
               maximum: 9999,
             },
             month: {
@@ -249,7 +249,7 @@ const dataSchema: Schema<Data> = {
           properties: {
             year: {
               type: 'number',
-              minimum: 1,
+              minimum: -9999,
               maximum: 9999,
             },
             month: {
