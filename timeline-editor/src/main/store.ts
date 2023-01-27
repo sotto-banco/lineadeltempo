@@ -26,7 +26,7 @@ interface EventMediaObject extends MediaObject {
   thumbnail: string;
 }
 
-interface CoordsObject {
+export interface CoordsObject {
   lat: number;
   lon: number;
   title: string;

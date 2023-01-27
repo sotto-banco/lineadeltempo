@@ -42,21 +42,18 @@ const pruneEvents = (toPrune: EventObject[]) => {
         start_date: { year: e.start_date.year },
         text: { ...e.text },
       };
-      if (e.coords && e.coords.title !== '')
+      if (
+        e.coords &&
+        e.coords.title !== '' &&
+        e.coords.lat &&
+        e.coords.lon &&
+        !(e.coords.lat === 0 && e.coords.lon === 0)
+      ) {
         pruned = {
           ...pruned,
-          coords: { title: e.coords.title },
+          coords: { ...e.coords },
         };
-      if (e.coords?.lat)
-        pruned = {
-          ...pruned,
-          coords: { ...pruned.coords, lat: e.coords.lat },
-        };
-      if (e.coords?.lon)
-        pruned = {
-          ...pruned,
-          coords: { ...pruned.coords, lon: e.coords.lon },
-        };
+      }
 
       if (e.start_date.month)
         pruned = {

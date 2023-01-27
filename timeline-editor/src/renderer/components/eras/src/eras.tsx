@@ -37,7 +37,6 @@ const pruneEras = (toPrune: EraObject[]) => {
 
     return e;
   });
-  console.log(pruned);
   return pruned.filter((e) => e.text.headline !== 'NUOVA');
 };
 

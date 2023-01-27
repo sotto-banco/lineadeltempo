@@ -2,60 +2,56 @@
     "title": {
         "text": {
             "headline": "Linea temporale '900",
-            "text": "Breve descrizione progetto/pagina."
+            "text": "sotto-banco"
         },
         "media": {
-            "url": "test.png",
-            "alt": "'900"
+            "url": "",
+            "alt": ""
         }
     },
     "events": [
         {
+            "autolink": true,
+            "display_date": "1870",
             "start_date": {
                 "year": 1870
             },
-            "group": "Storia",
             "text": {
                 "headline": "Inizio II Rivoluzione Industriale",
                 "text": "<strong>Inghilterra</strong> centro di grandi innovazioni. Treno, motore a scoppio, aereoplano, sommergibile, <strong>cinematografo</strong>, <strong>radio</strong>.<br />Utilizzo del carbone, acciaio e petrolio come combustibili."
             },
-            "display_date": "1870",
-            "autolink": true,
+            "coords": {
+                "title": "II Rivoluzione Industriale",
+                "lat": 51.507359,
+                "lon": -0.136439
+            },
+            "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 51.507359,
-                "lon": -0.136439,
-                "title": "II Rivoluzione Industriale"
-            },
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "1880",
             "start_date": {
                 "year": 1880
             },
-            "group": "Storia",
             "text": {
                 "headline": "Imperialismo",
                 "text": "Imporre, da parte di una nazione su un'altra, il proprio dominio economico e politico al fine di creare degli imperi economici molto potenti. I <strong>protagonisti</strong> sono: Francia, Germania, Inghilterra."
             },
-            "display_date": "1880",
+            "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "autolink": true,
-            "coords": {
-                "lat": 0,
-                "lon": 0,
-                "title": ""
             }
         },
         {
+            "autolink": true,
+            "display_date": "28 Giugno 1914",
             "start_date": {
                 "year": 1914,
                 "month": 6,
@@ -65,22 +61,21 @@
                 "headline": "Assassinio di Francesco Ferdinando",
                 "text": "L'erede al trono dell'impero, <strong>Francesco Ferdinando</strong>, e sua moglie Sofia a Sarajevo da Gavrilo Princip, un giovane serbo. La morte di Ferdinando scatena la I Guerra Mondiale.<br />Schieramenti:<br /><strong>Alleanza</strong>:<br />- Inghilterra<br />- Francia<br />- Russia<br />- Italia<br />- Stati Uniti<br /><strong>Asse</strong>:<br />- Germania<br />- Austria-Ungheria<br />- Impero Ottomano<br />- Bulgaria<br />- Giappone<br />"
             },
-            "display_date": "28 Giugno 1914",
+            "coords": {
+                "title": "Assassinio di Francesco Ferdinando",
+                "lat": 43.856258,
+                "lon": 18.413076
+            },
             "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 43.856258,
-                "lon": 18.413076,
-                "title": "Assassinio di Francesco Ferdinando"
-            },
-            "autolink": true,
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "24 Maggio 1915",
             "start_date": {
                 "year": 1915,
                 "month": 5,
@@ -90,22 +85,16 @@
                 "headline": "L'Italia dichiara guerra all'Austria-Ungheria",
                 "text": "L'Italia dichiarò guerra all'Austria ed entrò così nella I Guerra Mondiale."
             },
-            "display_date": "24 Maggio 1915",
             "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "autolink": true,
-            "coords": {
-                "lat": 0,
-                "lon": 0,
-                "title": ""
-            },
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "3 Novembre 1918",
             "start_date": {
                 "year": 1918,
                 "month": 11,
@@ -115,22 +104,21 @@
                 "headline": "Armistizio di Villa Giusti",
                 "text": "L'Italia, dopo 4 anni di guerra, si arrende all'Asse. L'armistizio di Villa Giusti, firmato il 3 novembre 1918, mette fine alla Prima Guerra Mondiale."
             },
-            "display_date": "3 Novembre 1918",
+            "coords": {
+                "title": "Armistizio di Villa Giusti",
+                "lat": 45.464203,
+                "lon": 9.189982
+            },
             "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 45.464203,
-                "lon": 9.189982,
-                "title": "Armistizio di Villa Giusti"
-            },
-            "autolink": true,
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "28 Giugno 1919",
             "start_date": {
                 "year": 1919,
                 "month": 6,
@@ -140,189 +128,159 @@
                 "headline": "Trattato di Versailles",
                 "text": "Il trattato di Versailles, anche è uno dei trattati di pace che posero ufficialmente fine alla prima guerra mondiale.<br />Per l'Italia fu una cosidetta <strong>VITTORIA MUTILATA</strong>: mancanza di tutti i compensi territoriali che ritenevano spettassero all'Italia dopo la prima guerra mondiale (Fiume e la Dalmazia)."
             },
-            "display_date": "28 Giugno 1919",
+            "coords": {
+                "title": "Trattato di Versailles",
+                "lat": 48.856614,
+                "lon": 2.352222
+            },
             "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 48.856614,
-                "lon": 2.352222,
-                "title": "Trattato di Versailles"
-            },
-            "autolink": true,
-            "end_date": {}
+            }
         },
         {
-            "text": {
-                "headline": "Marcia su Roma",
-                "text": "Il 27 ottobre 1922, Mussolini, con il suo esercito, si avvicina a Roma. Il 29 ottobre, Mussolini entra in città e viene proclamato Duce."
-            },
+            "autolink": true,
             "display_date": "27 Ottobre 1922",
-            "group": "Storia",
             "start_date": {
                 "year": 1922,
                 "month": 10,
                 "day": 27
             },
+            "text": {
+                "headline": "Marcia su Roma",
+                "text": "Il 27 ottobre 1922, Mussolini, con il suo esercito, si avvicina a Roma. Il 29 ottobre, Mussolini entra in città e viene proclamato Duce."
+            },
+            "coords": {
+                "title": "Marcia su Roma",
+                "lat": 41.9027,
+                "lon": 12.496366
+            },
+            "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 41.9027,
-                "lon": 12.496366,
-                "title": "Marcia su Roma"
-            },
-            "autolink": true,
-            "end_date": {}
+            }
         },
         {
-            "text": {
-                "headline": "Omicidio Matteotti",
-                "text": "Ucciso da squadre fasciste per aver denunciato brogli elettorali su ordine di Mussolini."
-            },
+            "autolink": true,
             "display_date": "10 Luglio 1924",
-            "group": "Storia",
             "start_date": {
                 "year": 1924,
                 "month": 7,
                 "day": 10
             },
+            "text": {
+                "headline": "Omicidio Matteotti",
+                "text": "Ucciso da squadre fasciste per aver denunciato brogli elettorali su ordine di Mussolini."
+            },
+            "coords": {
+                "title": "Omicidio Matteotti",
+                "lat": 41.911575166506225,
+                "lon": 12.472296884974117
+            },
+            "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 41.902782,
-                "lon": 12.4963,
-                "title": "Omicidio Matteotti"
-            },
-            "autolink": true,
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "1925",
+            "start_date": {
+                "year": 1925
+            },
             "text": {
                 "headline": "Leggi Fascistissime",
                 "text": "Identifica una serie di norme giuridiche, emanate che sancirono l'inizio della dittatura Fascista."
             },
-            "display_date": "1925",
             "group": "Storia",
-            "start_date": {
-                "year": 1925
-            },
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "autolink": true,
-            "coords": {
-                "lat": 0,
-                "lon": 0,
-                "title": ""
-            },
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "1932",
+            "start_date": {
+                "year": 1932
+            },
             "text": {
                 "headline": "Hitler sale al potere in Germania",
                 "text": ""
             },
-            "display_date": "1932",
             "group": "Storia",
-            "start_date": {
-                "year": 1932
-            },
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "autolink": true,
-            "coords": {
-                "lat": 0,
-                "lon": 0,
-                "title": ""
-            },
-            "end_date": {}
+            }
         },
         {
+            "autolink": true,
+            "display_date": "1935",
+            "start_date": {
+                "year": 1935
+            },
             "text": {
                 "headline": "Promulgazione delle leggi razziali",
                 "text": ""
             },
-            "display_date": "1935",
             "group": "Storia",
-            "start_date": {
-                "year": 1935
-            },
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "autolink": true,
-            "coords": {
-                "lat": 0,
-                "lon": 0,
-                "title": ""
-            },
-            "end_date": {}
+            }
         },
         {
-            "text": {
-                "headline": "Notte dei cristalli",
-                "text": "Ondata di violenza antisemita propagata in Germania."
-            },
+            "autolink": true,
             "display_date": "9-10 Novembre 1938",
-            "group": "Storia",
             "start_date": {
                 "year": 1938,
                 "month": 11,
                 "day": 9
             },
+            "text": {
+                "headline": "Notte dei cristalli",
+                "text": "Ondata di violenza antisemita propagata in Germania."
+            },
+            "coords": {
+                "title": "Notte dei cristalli",
+                "lat": 52.520008,
+                "lon": 13.404954
+            },
+            "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "coords": {
-                "lat": 52.520008,
-                "lon": 13.404954,
-                "title": "Notte dei cristalli"
-            },
-            "autolink": true,
-            "end_date": {}
+            }
         },
         {
-            "text": {
-                "headline": "Inizio II Guerra Mondiale",
-                "text": "<strong>Causa</strong>: invasione della Germania della Polonia.<br />"
-            },
+            "autolink": true,
             "display_date": "1 Settembre 1939",
-            "group": "Storia",
             "start_date": {
                 "year": 1939,
                 "month": 9,
                 "day": 1
             },
+            "text": {
+                "headline": "Inizio II Guerra Mondiale",
+                "text": "<strong>Causa</strong>: invasione della Germania della Polonia.<br />"
+            },
+            "group": "Storia",
             "media": {
                 "url": "test.png",
                 "alt": "test",
                 "thumbnail": "time.png"
-            },
-            "autolink": true,
-            "coords": {
-                "lat": 0,
-                "lon": 0,
-                "title": ""
-            },
-            "end_date": {}
+            }
         }
     ],
     "eras": [
@@ -334,7 +292,7 @@
                 "year": 1945
             },
             "text": {
-                "headline": "II Rivoluzione Industrialezz",
+                "headline": "II Rivoluzione Industriale",
                 "text": ""
             }
         },
