@@ -291,12 +291,16 @@ export default class MenuBuilder {
                     { recursive: true }
                   );
 
-                  runChild('git add --a', projectPath);
-                  runChild('git commit -m timeline-editor', projectPath);
-                  runChild('git push', projectPath);
+                  try {
+                    runChild('git add --a', projectPath);
+                    runChild('git commit -m timeline-editor', projectPath);
+                    runChild('git push', projectPath);
 
-                  runChild('npm run deploy', projectPath);
-                  dialog.showMessageBox({ message: 'sito aggiornato' });
+                    runChild('npm run deploy', projectPath);
+                    dialog.showMessageBox({ message: 'sito aggiornato' });
+                  } catch (error) {
+                    dialog.showErrorBox('errore', error);
+                  }
                 }
               }
             },
