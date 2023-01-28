@@ -351,5 +351,5 @@
     * {
         box-sizing: border-box;
     }
-`;const Ht=document.getElementById("root");(0,n.s)(Ht).render((0,t.jsx)((function(){return(0,r.useEffect)((()=>(window.electron.ipcRenderer.on("error",(e=>alert(e))),()=>window.electron.ipcRenderer.removeListener("error")))),(0,t.jsxs)(G,{children:[(0,t.jsx)(Vt,{}),(0,t.jsx)(Z,{children:(0,t.jsx)(K,{path:"/",element:(0,t.jsx)(Bt,{})})})]})}),{}))})(),l})()));
+`;const Ht=document.getElementById("root");(0,n.s)(Ht).render((0,t.jsx)((function(){return(0,r.useEffect)((()=>(window.electron.ipcRenderer.on("error",(e=>console.log(e))),()=>window.electron.ipcRenderer.removeListener("error")))),(0,t.jsxs)(G,{children:[(0,t.jsx)(Vt,{}),(0,t.jsx)(Z,{children:(0,t.jsx)(K,{path:"/",element:(0,t.jsx)(Bt,{})})})]})}),{}))})(),l})()));
 //# sourceMappingURL=renderer.js.map

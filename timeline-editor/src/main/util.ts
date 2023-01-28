@@ -14,11 +14,7 @@ export function resolveHtmlPath(htmlFileName: string) {
 }
 
 export const runChild = (command: string, path: string, cb?: () => any) => {
-  try {
-    const child = execSync(command, { cwd: path });
-    console.log(child.toString());
-    if (cb) cb();
-  } catch (error) {
-    console.log(error);
-  }
+  const child = execSync(command, { cwd: path });
+  console.log(child.toString());
+  if (cb) cb();
 };

@@ -292,14 +292,31 @@ export default class MenuBuilder {
                   );
 
                   try {
+                    this.mainWindow.webContents.send(
+                      'error',
+                      'spawning git add'
+                    );
                     runChild('git add --a', projectPath);
+                    this.mainWindow.webContents.send('error', 'done');
+                    this.mainWindow.webContents.send(
+                      'error',
+                      'spawning git commit'
+                    );
                     runChild('git commit -m timeline-editor', projectPath);
+                    this.mainWindow.webContents.send('error', 'done');
+                    this.mainWindow.webContents.send(
+                      'error',
+                      'spawning git push'
+                    );
                     runChild('git push', projectPath);
+                    this.mainWindow.webContents.send('error', 'done');
 
+                    this.mainWindow.webContents.send('error', 'deploying');
                     runChild('npm run deploy', projectPath);
+                    this.mainWindow.webContents.send('error', 'done');
                     dialog.showMessageBox({ message: 'sito aggiornato' });
                   } catch (error) {
-                    dialog.showErrorBox('errore', error);
+                    this.mainWindow.webContents.send('error', error);
                   }
                 }
               }

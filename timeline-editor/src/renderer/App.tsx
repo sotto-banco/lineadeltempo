@@ -5,8 +5,8 @@ import { GlobalStyles } from './ui/globalStyles';
 
 export default function App() {
   useEffect(() => {
-    window.electron.ipcRenderer.on('error', (message: string) =>
-      alert(message)
+    window.electron.ipcRenderer.on('error', (message: any) =>
+      console.log(message)
     );
     return () => window.electron.ipcRenderer.removeListener('error');
   });
