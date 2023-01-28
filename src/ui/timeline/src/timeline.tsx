@@ -11,12 +11,18 @@ const Dummy = (props: Props) => {
 			{
 				title: {
 					...timelineData.title,
-					media: {
-						...timelineData.title.media,
-						url: require('../../../data/media/'.concat(
-							timelineData.title.media.url
-						))
-					}
+					media:
+						timelineData.title.media.url !== ''
+							? {
+									...timelineData.title.media,
+									url: require('../../../data/media/'.concat(
+										timelineData.title.media.url
+									))
+							  }
+							: {
+									alt: '',
+									url: ''
+							  }
 				},
 				events: timelineData.events.map(e => {
 					let parsed: any = { ...e };
