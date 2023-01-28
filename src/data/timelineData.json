@@ -75,15 +75,20 @@
         },
         {
             "autolink": true,
-            "display_date": "24 Maggio 1915",
+            "display_date": "24 Maggio 1915 ",
             "start_date": {
                 "year": 1915,
                 "month": 5,
                 "day": 24
             },
             "text": {
-                "headline": "L'Italia dichiara guerra all'Austria-Ungheria",
-                "text": "L'Italia dichiarò guerra all'Austria ed entrò così nella I Guerra Mondiale."
+                "headline": "L'Italia dichiara guerra all'Impero Austro-Ungarico",
+                "text": "<strong>Patto di Londra</strong>: fu un accordo segreto <strong>(26 aprile 1915)<strong>stipulato tra il governo italiano e i rappresentanti dell'Alleanza <strong>Inghilterra, Francia e Russia)</strong>, con i quali l'Italia si impegnò a scendere in guerra contro gli Imperi Centrali.<br />\nDopo circa un mese dal Patto di Londra l'Italia dichiarò guerra all'Impero Austro-Ungarico ed entrò ufficialmente nella I Guerra Mondiale.<br />\nhttps://www.raicultura.it/storia/accadde-oggi/LItalia-firma-il-Patto-di-Londra-2108736f-ef0d-41cd-bb02-1d45e049b037.html"
+            },
+            "coords": {
+                "lat": 51.533514782244,
+                "lon": 0.07959390648311854,
+                "title": "L'Italia dichiara guerra all'Impero Austro-Ungarico"
             },
             "group": "Storia",
             "media": {
