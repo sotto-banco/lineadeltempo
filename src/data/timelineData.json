@@ -25,7 +25,12 @@
                 "lat": 51.510362867558634,
                 "lon": -0.1194855024581014
             },
-            "group": "Storia"
+            "group": "Storia",
+            "media": {
+                "url": "IIrivoluzioneindustriale",
+                "alt": "IIrivoluzioneindustriale",
+                "thumbnail": "ciminiera"
+            }
         },
         {
             "autolink": true,
