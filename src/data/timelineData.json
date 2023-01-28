@@ -66,12 +66,7 @@
                 "lat": 43.856258,
                 "lon": 18.413076
             },
-            "group": "Storia",
-            "media": {
-                "url": "attentato.pgn",
-                "alt": "attentato.pgn",
-                "thumbnail": "guerra.png"
-            }
+            "group": "Storia"
         },
         {
             "autolink": true,
