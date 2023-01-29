@@ -128,6 +128,30 @@
         },
         {
             "autolink": true,
+            "display_date": "24 Ottobre 1917",
+            "start_date": {
+                "year": 1917,
+                "month": 10,
+                "day": 24
+            },
+            "text": {
+                "headline": "Caporetto",
+                "text": "Detta anche dodicesima battaglia dell'Isonzo. Lo scontro, che iniziò alle ore 2:00 del<strong> 24 ottobre 1917</strong>, rappresenta il più grande insuccesso nella storia dell'esercito italiano, tanto che, non solo nella lingua italiana, ancora oggi il termine Caporetto viene utilizzato come sinonimo di sconfitta. Con la crisi della Russia dovuta alla rivoluzione, Austria-Ungheria e Germania poterono trasferire consistenti truppe dal fronte orientale a quelli occidentale e italiano. Forti di questi rinforzi, gli austro-ungarici, con l'apporto di reparti d'élite tedeschi, sfondarono le linee tenute dalle truppe italiane che, impreparate ad una guerra difensiva e duramente provate dalle precedenti undici battaglie dell'Isonzo, non ressero all'urto e dovettero ritirarsi fino al fiume Piave. ​​La sconfitta portò alla sostituzione del generale <strong>Luigi Cadorna</strong>, che aveva imputato l'esito infausto della battaglia alla viltà dei suoi soldati, con<strong>Armando Diaz</strong>.(fonte Ministero della Difesa).<br />\n[RaiPlay]\n(https://www.raiplay.it/video/2017/10/Cultura-Passato-e-Presente---Caporetto-la-battaglia-900d0412-eda0-4b49-9cb2-4250750034df.html)<br/>(https://www.raiplay.it/video/2018/07/Caporetto-25072018-b9a8a6d0-ce46-4773-ae24-bb2a78d53063.html)\n[RaiScuola]\nhttps://www.raiscuola.rai.it/storia/articoli/2021/01/Caporetto-La-battaglia-0357a8fa-be5f-4f27-b32d-851fdc91cff3.html\n\n"
+            },
+            "coords": {
+                "lat": 46.24776672115614,
+                "lon": 13.585649925414351,
+                "title": "Caporetto"
+            },
+            "group": "Storia",
+            "media": {
+                "url": "caporetto.png",
+                "alt": "caporetto.png",
+                "thumbnail": "battaglia.png"
+            }
+        },
+        {
+            "autolink": true,
             "display_date": "3 Novembre 1918",
             "start_date": {
                 "year": 1918,
