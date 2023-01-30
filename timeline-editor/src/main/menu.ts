@@ -294,6 +294,12 @@ export default class MenuBuilder {
                   try {
                     this.mainWindow.webContents.send(
                       'error',
+                      'spawning git pull'
+                    );
+                    runChild('git pull', projectPath);
+                    this.mainWindow.webContents.send('error', 'done');
+                    this.mainWindow.webContents.send(
+                      'error',
                       'spawning git add'
                     );
                     runChild('git add --a', projectPath);
