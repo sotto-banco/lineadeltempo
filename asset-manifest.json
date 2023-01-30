@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.f73bcd1f.js",
+    "main.js": "/lineadeltempo/static/js/main.7588cb9c.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
     "static/media/IIrivoluzioneindustriale.png": "/lineadeltempo/static/media/IIrivoluzioneindustriale.7b6a0a8d7a08eabda36c.png",
@@ -9,6 +9,7 @@
     "static/media/svastica.png": "/lineadeltempo/static/media/svastica.f19b6d80357955e9b970.png",
     "static/media/dichiarazione.png": "/lineadeltempo/static/media/dichiarazione.63edcb7491fcced65c31.png",
     "static/media/rivoluzione.png": "/lineadeltempo/static/media/rivoluzione.4b7d5d2ebe589864013a.png",
+    "static/media/russiafebbraio.png": "/lineadeltempo/static/media/russiafebbraio.d7312e2460ad2f19d27a.png",
     "static/media/guerra.png": "/lineadeltempo/static/media/guerra.3e1c4d4e9c6900e13856.png",
     "static/media/vetralla.png": "/lineadeltempo/static/media/vetralla.3e35d50bbeed39620b67.png",
     "static/media/imperialismo.png": "/lineadeltempo/static/media/imperialismo.0beda20d675d89494283.png",
@@ -23,13 +24,14 @@
     "static/media/marker.png": "/lineadeltempo/static/media/marker.b39e6e0503a926d8ad2e.png",
     "static/media/test.png": "/lineadeltempo/static/media/test.f0892a3ad579c792514b.png",
     "static/media/time.png": "/lineadeltempo/static/media/time.f0892a3ad579c792514b.png",
+    "static/media/falcemartello.png": "/lineadeltempo/static/media/falcemartello.d1780aeedb8124ebeede.png",
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.f73bcd1f.js.map": "/lineadeltempo/static/js/main.f73bcd1f.js.map"
+    "main.7588cb9c.js.map": "/lineadeltempo/static/js/main.7588cb9c.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.f73bcd1f.js"
+    "static/js/main.7588cb9c.js"
   ]
 }
