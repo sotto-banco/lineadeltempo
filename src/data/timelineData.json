@@ -29,7 +29,7 @@
             "media": {
                 "url": "IIrivoluzioneindustriale.png",
                 "alt": "IIrivoluzioneindustriale.png",
-                "thumbnail": "ciminiera.png"
+                "thumbnail": "industriale.png"
             }
         },
         {
@@ -208,18 +208,18 @@
             },
             "text": {
                 "headline": "Armistizio di Villa Giusti",
-                "text": "L'Italia, dopo 4 anni di guerra, si arrende all'Asse.<br /> L'armistizio di Villa Giusti, firmato il 3 novembre 1918, mette fine alla Prima Guerra Mondiale."
+                "text": "L'Italia, dopo 4 anni di guerra, si arrende all'Asse. L'armistizio di Villa Giusti, firmato il 3 novembre 1918, mette fine alla Prima Guerra Mondiale. Dopo la battaglia di Vittorio Veneto la sconfitta austriaca si trasformò in rotta non più arginabile e mentre le truppe tentavano di rientrare in patria, alle ore 9:30 del 1 novembre, una commissione mista (italiana ed austriaca), nei pressi di Padova, a Villa Giusti, iniziò i lavori per la stesura del testo dell’armistizio: la resa austriaca. Il comandante del VI Corpo d’Armata austro-ungarico, generale Weber von Webenau, sottoscriveva le clausole dell’armistizio impostegli dal Maresciallo Generale del Regno, <strong>Pietro Badoglio.</strong>fonte Ministero della difesa).\n<br /><br />\n<strong>Risorse:</strong>\n<br />\n<a href=\"https://www.raiplay.it/video/2019/03/4-11-1918---Fine-larmistizio-la-vittoria-e-gli-sconfitti-della-Grande-Guerra-031ba317-742d-4954-992f-2e58db1acd6e.html\"target=\"_blank\">- Documentario su RaiPlay</a>"
             },
             "coords": {
                 "title": "Armistizio di Villa Giusti",
-                "lat": 45.464203,
-                "lon": 9.189982
+                "lat": 45.37083363680604,
+                "lon": 11.842418997481683
             },
             "group": "Storia",
             "media": {
-                "url": "test.png",
-                "alt": "test",
-                "thumbnail": "time.png"
+                "url": "villagiusti.png",
+                "alt": "villagiusti.png",
+                "thumbnail": "pace.png"
             }
         },
         {
