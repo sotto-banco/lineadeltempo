@@ -51,6 +51,30 @@
         },
         {
             "autolink": true,
+            "display_date": "22 Gennaio 1905",
+            "start_date": {
+                "year": 1905,
+                "month": 1,
+                "day": 22
+            },
+            "text": {
+                "headline": "Prima Rivoluzione Russa",
+                "text": "Il 9 Gennaio la popolazione russa sfilò in processione presso il Palazzo d'Inverno, sede dello Zar, per chiedere la fine della guerra contro il Giappone. Lo Zar diede l'ordine di aprire il fuoco, ci furono 1000 morti e 2000 feriti<strong>(La domenica di Sangue).</strong> Seguirono scioperi e manifestazioni in tutta la Russia. Nicola II promise riforme e libertà e concesse le elezioni della Duma (il Parlamento). Tutto questo non bastò, il culmine delle rivolte ci fu ad Ottobre, a seguito di uno sciopero generale venne creato il <strong>primo Soviet (consiglio) dei lavoratori che aveva come capo Ttockij.</strong><br />\n\n[RaiScuola]\n(https://www.raiscuola.rai.it/storia/articoli/2021/02/Romanov-1904---1912-55ad2c0c-b668-4c2d-9e27-d7d5e0c186c4.html)"
+            },
+            "coords": {
+                "title": "Prima Rivoluzione Russa",
+                "lon": 37.56143467396587,
+                "lat": 55.76352687470602
+            },
+            "group": "Storia",
+            "media": {
+                "alt": "russia1905.png",
+                "thumbnail": "rivoluzione.png",
+                "url": "russia1905.png"
+            }
+        },
+        {
+            "autolink": true,
             "display_date": "28 Giugno 1914",
             "start_date": {
                 "year": 1914,
