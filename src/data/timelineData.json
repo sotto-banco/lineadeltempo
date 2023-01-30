@@ -51,7 +51,7 @@
         },
         {
             "autolink": true,
-            "display_date": "22 Gennaio 1905",
+            "display_date": "22 Gennaio 1905 ",
             "start_date": {
                 "year": 1905,
                 "month": 1,
@@ -63,8 +63,8 @@
             },
             "coords": {
                 "title": "Prima Rivoluzione Russa",
-                "lon": 37.56143467396587,
-                "lat": 55.76352687470602
+                "lon": 30.31671831726298,
+                "lat": 59.93892603110345
             },
             "group": "Storia",
             "media": {
