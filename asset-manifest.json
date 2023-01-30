@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.56ccc095.js",
+    "main.js": "/lineadeltempo/static/js/main.55f031d6.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
     "static/media/IIrivoluzioneindustriale.png": "/lineadeltempo/static/media/IIrivoluzioneindustriale.7b6a0a8d7a08eabda36c.png",
@@ -25,10 +25,10 @@
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.56ccc095.js.map": "/lineadeltempo/static/js/main.56ccc095.js.map"
+    "main.55f031d6.js.map": "/lineadeltempo/static/js/main.55f031d6.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.56ccc095.js"
+    "static/js/main.55f031d6.js"
   ]
 }
