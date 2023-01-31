@@ -289,9 +289,9 @@
             },
             "group": "Storia",
             "media": {
-                "url": "russiatrattato.png",
                 "alt": "russiatrattato.png",
-                "thumbnail": "pace1.png"
+                "thumbnail": "pace1.png",
+                "url": "russiatrattato.png"
             }
         },
         {
