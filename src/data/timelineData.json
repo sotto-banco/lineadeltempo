@@ -243,7 +243,7 @@
             "media": {
                 "url": "villagiusti.png",
                 "alt": "villagiusti.png",
-                "thumbnail": "pace.png"
+                "thumbnail": "pace1.png"
             }
         },
         {
@@ -265,9 +265,9 @@
             },
             "group": "Storia",
             "media": {
-                "url": "campeignè.png",
-                "alt": "campeignè.png",
-                "thumbnail": "pace.png"
+                "url": "campeigne.png",
+                "alt": "campeigne.png",
+                "thumbnail": "pace1.png"
             }
         },
         {
@@ -291,7 +291,7 @@
             "media": {
                 "url": "russiatrattato.png",
                 "alt": "russiatrattato.png",
-                "thumbnail": "pace.png"
+                "thumbnail": "pace1.png"
             }
         },
         {
@@ -315,7 +315,7 @@
             "media": {
                 "url": "test.png",
                 "alt": "test",
-                "thumbnail": "time.png"
+                "thumbnail": "pace1.png"
             }
         },
         {
