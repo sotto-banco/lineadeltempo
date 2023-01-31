@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.d9a1b314.js",
+    "main.js": "/lineadeltempo/static/js/main.7a7779a6.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
     "static/media/campeigne.png": "/lineadeltempo/static/media/campeigne.f5e6dfeb8287bf13b632.png",
@@ -10,6 +10,7 @@
     "static/media/tempo.png": "/lineadeltempo/static/media/tempo.ba23e292298540d0ffc4.png",
     "static/media/donnerussia.png": "/lineadeltempo/static/media/donnerussia.b7c1a1a1d153848858f6.png",
     "static/media/svastica.png": "/lineadeltempo/static/media/svastica.f19b6d80357955e9b970.png",
+    "static/media/versailles.png": "/lineadeltempo/static/media/versailles.fb2a4dab2ca6aa259315.png",
     "static/media/dichiarazione.png": "/lineadeltempo/static/media/dichiarazione.63edcb7491fcced65c31.png",
     "static/media/rivoluzione.png": "/lineadeltempo/static/media/rivoluzione.4b7d5d2ebe589864013a.png",
     "static/media/pace1.png": "/lineadeltempo/static/media/pace1.883db7c43b1b230c1ac8.png",
@@ -39,10 +40,10 @@
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.d9a1b314.js.map": "/lineadeltempo/static/js/main.d9a1b314.js.map"
+    "main.7a7779a6.js.map": "/lineadeltempo/static/js/main.7a7779a6.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.d9a1b314.js"
+    "static/js/main.7a7779a6.js"
   ]
 }
