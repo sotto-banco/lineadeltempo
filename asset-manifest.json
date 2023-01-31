@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.95da8b54.js",
+    "main.js": "/lineadeltempo/static/js/main.8b6a7e3e.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
+    "static/media/campeigne.png": "/lineadeltempo/static/media/campeigne.f5e6dfeb8287bf13b632.png",
     "static/media/campeignè.png": "/lineadeltempo/static/media/campeignè.f5e6dfeb8287bf13b632.png",
     "static/media/IIrivoluzioneindustriale.png": "/lineadeltempo/static/media/IIrivoluzioneindustriale.7b6a0a8d7a08eabda36c.png",
     "static/media/tempo.png": "/lineadeltempo/static/media/tempo.ba23e292298540d0ffc4.png",
@@ -11,6 +12,7 @@
     "static/media/svastica.png": "/lineadeltempo/static/media/svastica.f19b6d80357955e9b970.png",
     "static/media/dichiarazione.png": "/lineadeltempo/static/media/dichiarazione.63edcb7491fcced65c31.png",
     "static/media/rivoluzione.png": "/lineadeltempo/static/media/rivoluzione.4b7d5d2ebe589864013a.png",
+    "static/media/pace1.png": "/lineadeltempo/static/media/pace1.883db7c43b1b230c1ac8.png",
     "static/media/russiafebbraio.png": "/lineadeltempo/static/media/russiafebbraio.d7312e2460ad2f19d27a.png",
     "static/media/russiaottobre.png": "/lineadeltempo/static/media/russiaottobre.d7312e2460ad2f19d27a.png",
     "static/media/russiatrattato.png": "/lineadeltempo/static/media/russiatrattato.fedd55911604c661ab0c.png",
@@ -36,10 +38,10 @@
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.95da8b54.js.map": "/lineadeltempo/static/js/main.95da8b54.js.map"
+    "main.8b6a7e3e.js.map": "/lineadeltempo/static/js/main.8b6a7e3e.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.95da8b54.js"
+    "static/js/main.8b6a7e3e.js"
   ]
 }
