@@ -344,15 +344,15 @@
         },
         {
             "autolink": true,
-            "display_date": "10 Luglio 1924",
+            "display_date": "10 Giugno 1924",
             "start_date": {
                 "year": 1924,
-                "month": 7,
+                "month": 6,
                 "day": 10
             },
             "text": {
                 "headline": "Delitto Matteotti",
-                "text": "Ucciso da squadre fasciste per aver denunciato brogli elettorali su ordine di Mussolini.\n\n\n[...]Ma a me preme dimostrare, soprattutto, che la violenza esercitata dal fascismo è una reazione, un mezzo, di cui la vostra classe vuol farsi arma per provvedere al proprio interesse.[...]. Esso è una reazione non tanto contro gli atti di violenza deplorati, quanto contro le conquiste economiche del proletariato[...]\n(Discorso alla Camera dei Deputati, 31 gennaio 1921 di Giacomo Matteotti)\n<br /><br />\n<strong>Risorse:</strong>\n<br />\n<a href=\"https://www.archivioluce.com/il-delitto-matteotti/\"target=\"_blank\">- Documento su ArchivioLuce</a>\n\n"
+                "text": "Il deputato socialista Giacomo Matteotti viene ucciso nel 1924 da una squadra della Ceka, la polizia segreta fascista. Un omicidio che ha condizionato le vicende politiche italiane di quell'anno, che ha suscitato orrore e sdegno in tutto il Paese e che ha segnato<strong> il passaggio definitivo del governo fascista a un regime apertamente dittatoriale e antidemocratico.</strong> Per protesta tutta l'opposizione parlamentare si ritira nel cosiddetto Aventino. Seguono mesi di braccio di ferro, in cui il governo fascista sembra sul punto di capitolare.<strong> Ma il 3 gennaio 1925, con un famoso discorso alla Camera, Mussolini si assume in prima persona la responsabilità politica del delitto Matteotti.</strong>(fonte Rai Storia).\n<br />\n(Discorso alla Camera dei Deputati, 31 gennaio 1921 di Giacomo Matteotti)\n<br /><br />\n<strong>Risorse:</strong>\n<br />\n<a href=\"https://www.archivioluce.com/il-delitto-matteotti/\"target=\"_blank\">- Documento su ArchivioLuce</a>\n<br />\n<a href=\"https://www.raiscuola.rai.it/storia/articoli/2021/08/Il-delitto-Matteotti-e71cc4ba-48b0-426a-9dd3-f1d389103394.html\"target=\"_blank\">- Documentario su RaiScuola</a>"
             },
             "coords": {
                 "title": "Delitto Matteotti",
@@ -361,9 +361,9 @@
             },
             "group": "Storia",
             "media": {
-                "url": "test.png",
-                "alt": "test",
-                "thumbnail": "time.png"
+                "url": "matteotti.png",
+                "alt": "matteotti.png",
+                "thumbnail": "fascio.png"
             }
         },
         {
