@@ -515,6 +515,22 @@
                 "headline": "II Guerra Mondiale",
                 "text": ""
             }
+        },
+        {
+            "text": {
+                "headline": "Fascismo",
+                "text": ""
+            },
+            "start_date": {
+                "year": 1922,
+                "month": 10,
+                "day": 31
+            },
+            "end_date": {
+                "year": 1943,
+                "month": 7,
+                "day": 25
+            }
         }
     ]
 }
