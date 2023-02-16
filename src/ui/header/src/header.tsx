@@ -7,8 +7,8 @@ const StyledHeader = (props: Props) => {
 
 	return (
 		<div className={props.className}>
-			<h2 className='title'>{props.label}</h2>
-			<div className='titleMobile'>{props.label}</div>
+			<h2 className='title'>Sottobanco Scuola Digitale</h2>
+			<div className='titleMobile'>SSD</div>
 			<div className='nav'>
 				<div
 					className={
@@ -57,7 +57,7 @@ export const Header = styled(StyledHeader)`
 	background-color: rgb(255, 136, 0);
 
 	.title {
-		font-size: 2em;
+		font-size: 1.5em;
 		font-weight: bold;
 		text-shadow: 2px 2px 6px rgb(255, 241, 199);
 	}
@@ -89,19 +89,20 @@ export const Header = styled(StyledHeader)`
 		text-shadow: 2px 2px 5px black;
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 800px) {
 		.title {
 			display: none;
 		}
 
 		.titleMobile {
 			display: block;
-			font-size: 1em;
+			font-size: 1.5em;
 			font-weight: bold;
 			margin-right: 5px;
 			text-align: center;
 			padding: 10px;
 			text-shadow: 2px 2px 6px rgb(255, 241, 199);
+			content: 'pippo';
 		}
 
 		.navbutton {

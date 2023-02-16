@@ -5,10 +5,7 @@ import { DummyProps } from './types';
 const Dummy = (props: DummyProps) => {
 	return (
 		<div className={props.className}>
-			<Header
-				label='sotto banco'
-				selected='/info'
-			/>
+			<Header selected='/info' />
 			<h2 className='pageTitle'>Info</h2>
 			<div className='credits'>
 				<div className='credits__author'>

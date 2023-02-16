@@ -38,10 +38,7 @@ const Dummy = (props: DummyProps) => {
 
 	return (
 		<div className={props.className}>
-			<Header
-				label='sotto banco'
-				selected='/map'
-			/>
+			<Header selected='/map' />
 
 			<div className='mapContainer'>
 				<div className='map'>

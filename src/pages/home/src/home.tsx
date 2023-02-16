@@ -6,10 +6,7 @@ import { DummyProps } from './types';
 const Dummy = (props: DummyProps) => {
 	return (
 		<div className={props.className}>
-			<Header
-				label='sotto banco'
-				selected='/lineadeltempo'
-			/>
+			<Header selected='/lineadeltempo' />
 			<Timeline />
 		</div>
 	);
