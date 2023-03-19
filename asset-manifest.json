@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.1857de5f.js",
+    "main.js": "/lineadeltempo/static/js/main.d1a37a17.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
     "static/media/campeigne.png": "/lineadeltempo/static/media/campeigne.f5e6dfeb8287bf13b632.png",
@@ -26,12 +26,15 @@
     "static/media/imperialismo-colonialismo.png": "/lineadeltempo/static/media/imperialismo-colonialismo.ebb29322195e9eae21ba.png",
     "static/media/villagiusti.png": "/lineadeltempo/static/media/villagiusti.4af6d71f955db237d05e.png",
     "static/media/mussolini.png": "/lineadeltempo/static/media/mussolini.ead93f614ec2e814bb0a.png",
+    "static/media/crisi.png": "/lineadeltempo/static/media/crisi.17877fe0b9bca017d18f.png",
     "static/media/matteotti.png": "/lineadeltempo/static/media/matteotti.fc0d60432c8809f56acc.png",
     "static/media/pace.png": "/lineadeltempo/static/media/pace.08d71def6163481d0365.png",
     "static/media/ciminiera.png": "/lineadeltempo/static/media/ciminiera.3f79afd3eb5b96346f6b.png",
     "static/media/russia1905.png": "/lineadeltempo/static/media/russia1905.c9dd39a99d5144b5bde8.png",
     "static/media/1151241998-pin-red-and-black-swastika-pin-ww2-german-nazi-silver-hakenkreuz-badge-for-sale-2.jpg": "/lineadeltempo/static/media/1151241998-pin-red-and-black-swastika-pin-ww2-german-nazi-silver-hakenkreuz-badge-for-sale-2.53f5fe43de48ce2730f5.jpg",
+    "static/media/crash.png": "/lineadeltempo/static/media/crash.2d23604afce205ed7cc1.png",
     "static/media/imperialismo.png": "/lineadeltempo/static/media/imperialismo.9d3de662524cba980842.png",
+    "static/media/logo-sottobanco.PNG": "/lineadeltempo/static/media/logo-sottobanco.577bd0edca18bb63eae0.PNG",
     "static/media/fascio.png": "/lineadeltempo/static/media/fascio.0cd63f12189461dbf709.png",
     "static/media/industriale.png": "/lineadeltempo/static/media/industriale.8f00f4bad30b2c9db56e.png",
     "static/media/history.png": "/lineadeltempo/static/media/history.862484f209d7455cb134.png",
@@ -44,10 +47,10 @@
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.1857de5f.js.map": "/lineadeltempo/static/js/main.1857de5f.js.map"
+    "main.d1a37a17.js.map": "/lineadeltempo/static/js/main.d1a37a17.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.1857de5f.js"
+    "static/js/main.d1a37a17.js"
   ]
 }
