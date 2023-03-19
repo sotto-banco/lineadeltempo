@@ -249,6 +249,17 @@ export default class MenuBuilder {
             },
           },
           {
+            label: 'cerca progetto',
+            click: () => {
+              const updatedProjectPath = dialog.showOpenDialogSync({
+                    properties: ['openDirectory'],
+                  });
+                  if (updatedProjectPath) {
+                    setProjectPath(updatedProjectPath[0]);
+                  }
+          },
+          },
+          {
             label: 'aggiorna sito',
             accelerator: 'Ctrl+S',
             click: () => {
