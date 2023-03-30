@@ -401,6 +401,26 @@
                 "thumbnail": "crisi.png",
                 "url": "crash.png"
             }
+        },
+        {
+            "autolink": true,
+            "display_date": "1933",
+            "start_date": {
+                "year": 1933
+            },
+            "text": {
+                "headline": "Hitler al potere",
+                "text": "Hitler era diventato ormai un personaggio molto popolare ed un  interlocutore politico \"rispettabile\" ed ancora non estremista. Nel 1932 quando si svolsero le elezioni presidenziali, lo stesso Hitler ottenne  oltre 13 milioni di voti, ma fu il presidente uscente Hindenburg a  vincere di nuovo. In un clima quasi di guerra civile (povertà, fame,  violenze, disoccupazione, crisi economica) <strong>la Germania andò al  voto altre due volte (luglio e novembre 1932)</strong>, ma non ne uscì mai un chiaro vincitore, solo si continuava a rafforzare il partito nazionalsocialista (oltre il 35% dei voti). Lo stesso Hitler rivendicava a gran voce la Cancelleria del  Reich, appoggiato anche dalla grande industria, dai proprietari  terrieri e dall'esercito. <strong>Nel 1933 Hindenburg decise di dare la Cancelleria al partito con più voti, affidando il governo nelle mani di Hitler.</strong>\n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a href=\"https://www.archivioluce.com/30-gennaio-1933-hitler-cancelliere-del-reich/.html\"target=\"_blank\">30 gennaio 1933</a> su Archivio Luce- \"<a href=\"https://patrimonio.archivioluce.com/luce-web/detail/IL5000011663/2/le-elezioni-germania-l-appello-hitler-ai-lavoratori-tedeschi.html&jsonVal=\"target=\"_blank\">"
+            },
+            "end_date": {
+                "year": 1933
+            },
+            "group": "Storia",
+            "media": {
+                "url": "svastica.png",
+                "alt": "svastica.png",
+                "thumbnail": "elezioni1933.png"
+            }
         }
     ],
     "eras": [
