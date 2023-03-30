@@ -432,7 +432,7 @@
             },
             "text": {
                 "headline": "Notte dei Cristalli",
-                "text": "Il 7 Novembre  1938 un ebreo polacco uccise un diplomatico tedesco a \nParigi. Questo avvenimento suscitò un'ondata di violenze  contro il popolo ebraico in Germania che culminò con la  cosidetta notte dei cristalli. <strong>Tra il 9 ed il 10 novembre 1938 \nvennero infrante le vetrine dei negozi degli ebrei, distrutte le  sinagoghe, incendiate le abitazioni ed uccisi ebrei in tutta la  Germania.</strong>\n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a href=\"https://www.raiplay.it/video/2018/11/Passato-e-Presente-La-notte-dei-cristalli-6bc24b44-ff5d-4ca0-8ba6-c18b4b8c363c.html.html\"target=\"_blank\">NOtte dei Cristalli</a> su RaiPlay\""
+                "text": "Il 7 Novembre  1938 un ebreo polacco uccise un diplomatico tedesco a \nParigi. Questo avvenimento suscitò un'ondata di violenze  contro il popolo ebraico in Germania che culminò con la  cosidetta notte dei cristalli. <strong>Tra il 9 ed il 10 novembre 1938 \nvennero infrante le vetrine dei negozi degli ebrei, distrutte le  sinagoghe, incendiate le abitazioni ed uccisi ebrei in tutta la  Germania.</strong>\n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a href=\"https://www.raiplay.it/video/2018/11/Passato-e-Presente-La-notte-dei-cristalli-6bc24b44-ff5d-4ca0-8ba6-c18b4b8c363c.html\"target=\"_blank\">Notte dei Cristalli</a> su RaiPlay\""
             },
             "end_date": {
                 "year": 1938,
@@ -444,6 +444,30 @@
                 "alt": "nottecristalli.png",
                 "thumbnail": "svastica.png",
                 "url": "nottecristalli.png"
+            }
+        },
+        {
+            "autolink": true,
+            "display_date": "30 Giugno 1934",
+            "start_date": {
+                "year": 1934,
+                "month": 6,
+                "day": 30
+            },
+            "text": {
+                "headline": "Notte dei lunghi coltelli",
+                "text": "La notte dei lunghi coltelli, ricordata in Germania \ncome \" Röhm -Putsch \" (\"il colpo di Stato di \nRöhm\", secondo l'espressione coniata dalla \npropaganda del regime nazista) \", fu \n<strong>un'epurazione avvenuta la notte fra il 30 \ngiugno e il 1º luglio del 1934 in cui le SS e la \nGestapo assassinarono per ordine di Adolf Hitler \nalmeno un centinaio di persone</strong> tra cui diversi \nesponenti di spicco del partito nazista, in \nparticolare: Ernst Röhm, i vertici delle SA - le \nsquadre d'assalto naziste - riuniti nella cittadina di \nBad Wiessee, nemici personali o ex compagni \npolitici di Hitler.\n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a href=\"https://www.raiplay.it/video/2018/01/La-notte-dei-lunghi-coltelli---17012018-51aa39d2-fa58-44a4-a969-e1ea96e33d99.html\"target=\"_blank\">Notte dei lunghi coltelli</a> su RaiPlay\""
+            },
+            "end_date": {
+                "year": 1934,
+                "month": 7,
+                "day": 1
+            },
+            "group": "Storia",
+            "media": {
+                "alt": "lunghicoltelli.png",
+                "thumbnail": "svastica.png",
+                "url": "lunghicoltelli.png"
             }
         }
     ],
