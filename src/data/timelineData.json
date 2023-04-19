@@ -448,6 +448,30 @@
         },
         {
             "autolink": true,
+            "display_date": "15 Settembre 1935",
+            "start_date": {
+                "year": 1935,
+                "month": 9,
+                "day": 15
+            },
+            "text": {
+                "headline": "Leggi di Norimberga",
+                "text": "Nel 1935 venne legalizzata la persecuzione. Il 15 settembre \nil governo emanò le leggi di Norimberga che escludeva tutti \ngli Ebrei dalla Comunità Nazionale. <strong>Essi perdevano quindi \nla nazionalità tedesca e i diritti politici e civili. Gli stessi \nEbrei vennero dichiarati una \"razza inferiore\" dei \"sotto \nuomini\". Vennero esclusi dalle università, dalle scuole, dalle \nradio, giornali e da tutte le cariche pubbliche, fu inoltre \nimpedito loro di esercitare la medicina o l'avvocatura. \nDivenne inoltre un reato sposare un ebreo.</strong> \n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a href=\"https://www.raicultura.it/storia/accadde-oggi/Approvate-le-leggi-di-Norimberga-123f3eb1-f3a0-47d5-bfbf-1b56ed82f87f.html\"target=\"_blank\">Notte dei Cristalli</a> su RaiCultura\""
+            },
+            "end_date": {
+                "year": 1935,
+                "month": 9,
+                "day": 15
+            },
+            "group": "Storia",
+            "media": {
+                "alt": "legginorimberga.png",
+                "thumbnail": "svastica.png",
+                "url": "legginorimberga.png"
+            }
+        },
+        {
+            "autolink": true,
             "display_date": "9-10 Novembre 1938",
             "start_date": {
                 "year": 1938,
@@ -472,26 +496,50 @@
         },
         {
             "autolink": true,
-            "display_date": "15 Settembre 1935",
+            "display_date": "1 Settembre 1939",
             "start_date": {
-                "year": 1935,
+                "year": 1939,
                 "month": 9,
-                "day": 15
+                "day": 1
             },
             "text": {
-                "headline": "Leggi di Norimberga",
-                "text": "Nel 1935 venne legalizzata la persecuzione. Il 15 settembre \nil governo emanò le leggi di Norimberga che escludeva tutti \ngli Ebrei dalla Comunità Nazionale. <strong>Essi perdevano quindi \nla nazionalità tedesca e i diritti politici e civili. Gli stessi \nEbrei vennero dichiarati una \"razza inferiore\" dei \"sotto \nuomini\". Vennero esclusi dalle università, dalle scuole, dalle \nradio, giornali e da tutte le cariche pubbliche, fu inoltre \nimpedito loro di esercitare la medicina o l'avvocatura. \nDivenne inoltre un reato sposare un ebreo.</strong> \n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a href=\"https://www.raicultura.it/storia/accadde-oggi/Approvate-le-leggi-di-Norimberga-123f3eb1-f3a0-47d5-bfbf-1b56ed82f87f.html\"target=\"_blank\">Notte dei Cristalli</a> su RaiCultura\""
+                "headline": "Aggressione della Polonia",
+                "text": "<strong>La Germania attaccò la Polonia e la costrinse alla resa in soli 18 giorni.</strong> Il 3 settembre, in risposta, la Francia e la Gran Bretagna dichiarano guerra alla Germania. Anche la Russia, rivendicando il patto di Molotov-Ribbentrop, <strong>invase la parte orientale della Polonia.</strong>\n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<a https://archivio.quirinale.it/aspr/gianni-bisiach/AV-002-000537/1-settembre-1939-inizio-seconda-guerra-mondiale\"target=\"_blank\">Inizio seconda guerra mondiale</a> su Archivio del Quirinale"
             },
             "end_date": {
-                "year": 1935,
+                "year": 1939,
                 "month": 9,
-                "day": 15
+                "day": 1
             },
             "group": "Storia",
             "media": {
-                "alt": "legginorimberga.png",
-                "thumbnail": "svastica.png",
-                "url": "legginorimberga.png"
+                "alt": "polonia.png",
+                "thumbnail": "guerra.png",
+                "url": "polonia.png"
+            }
+        },
+        {
+            "autolink": true,
+            "display_date": "10 Maggio 1940",
+            "start_date": {
+                "year": 1940,
+                "month": 5,
+                "day": 10
+            },
+            "text": {
+                "headline": "Invasione della Francia",
+                "text": "Mentre l'esercito tedesco era impegnato con l'invasione della Norvegia,<strong> il 10 maggio 1940 Hitler decise di attaccare la Francia.</strong> Le truppe tedesche attaccarono dapprima Belgio e Olanda e poi puntarono su Parigi. Il 14 Giugno i tedeschi marciavano su Parigi. Il governo francese si trasferì a bordeaux dove il marescialle Petain iniziava le trattative per la resa. <strong>Secondo le clausole della stessa resa la Francia centro-settentrionale restò sotto l'occupazione tedesca ma nella parte meridionale si costituì un governo provvisorio (Repubblica di Vichy).</strong>\n<br /><br />\nFonte: Editrice La Scuola\n<br /><br />\n<strong>Risorse:</strong><br />-\"<ahttps://archivio.quirinale.it/aspr/gianni-bisiach/AV-002-000930/13-giugno-1940-i-tedeschi-entrano-parigi\"target=\"_blank\">Invasione della Francia</a> su Archivio del Quirinale"
+            },
+            "end_date": {
+                "year": 1940,
+                "month": 5,
+                "day": 10
+            },
+            "group": "Storia",
+            "media": {
+                "alt": "francia.png",
+                "thumbnail": "bataglia.png",
+                "url": "francia.png"
             }
         }
     ],
