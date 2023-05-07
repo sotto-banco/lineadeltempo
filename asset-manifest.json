@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.7fa906f7.js",
+    "main.js": "/lineadeltempo/static/js/main.ddc2b5f9.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/fine _guerra.png": "/lineadeltempo/static/media/fine _guerra.0a8f53201ba7f45162ee.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
@@ -59,10 +59,10 @@
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.7fa906f7.js.map": "/lineadeltempo/static/js/main.7fa906f7.js.map"
+    "main.ddc2b5f9.js.map": "/lineadeltempo/static/js/main.ddc2b5f9.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.7fa906f7.js"
+    "static/js/main.ddc2b5f9.js"
   ]
 }
