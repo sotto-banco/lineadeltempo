@@ -702,7 +702,7 @@
             "group": "Storia",
             "media": {
                 "alt": "miracolo.png",
-                "thumbnail": "",
+                "thumbnail": "bandiera.png",
                 "url": "miracolo.png"
             }
         },
@@ -746,7 +746,7 @@
             "group": "Storia",
             "media": {
                 "alt": "anni.png",
-                "thumbnail": "",
+                "thumbnail": "bandiera.png",
                 "url": "anni.png"
             }
         },
