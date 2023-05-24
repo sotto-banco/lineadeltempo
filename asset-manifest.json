@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lineadeltempo/static/css/main.a189e101.css",
-    "main.js": "/lineadeltempo/static/js/main.ddc2b5f9.js",
+    "main.js": "/lineadeltempo/static/js/main.253b1944.js",
     "static/media/attentatopng.png": "/lineadeltempo/static/media/attentatopng.730bda56fcd799576997.png",
     "static/media/fine _guerra.png": "/lineadeltempo/static/media/fine _guerra.0a8f53201ba7f45162ee.png",
     "static/media/caporetto.png": "/lineadeltempo/static/media/caporetto.ea8afc69776c0d96879e.png",
@@ -14,6 +14,7 @@
     "static/media/donnerussia.png": "/lineadeltempo/static/media/donnerussia.b7c1a1a1d153848858f6.png",
     "static/media/svastica.png": "/lineadeltempo/static/media/svastica.f19b6d80357955e9b970.png",
     "static/media/versailles.png": "/lineadeltempo/static/media/versailles.fb2a4dab2ca6aa259315.png",
+    "static/media/miracolo.png": "/lineadeltempo/static/media/miracolo.831755441c4d572652d7.png",
     "static/media/dichiarazione.png": "/lineadeltempo/static/media/dichiarazione.63edcb7491fcced65c31.png",
     "static/media/rivoluzione.png": "/lineadeltempo/static/media/rivoluzione.4b7d5d2ebe589864013a.png",
     "static/media/pace1.png": "/lineadeltempo/static/media/pace1.883db7c43b1b230c1ac8.png",
@@ -31,6 +32,7 @@
     "static/media/attentato.png": "/lineadeltempo/static/media/attentato.4f28c691c4b95fba142b.png",
     "static/media/imperialismo-colonialismo.png": "/lineadeltempo/static/media/imperialismo-colonialismo.ebb29322195e9eae21ba.png",
     "static/media/villagiusti.png": "/lineadeltempo/static/media/villagiusti.4af6d71f955db237d05e.png",
+    "static/media/anni.png": "/lineadeltempo/static/media/anni.f88d8a29a29df3c6bca6.png",
     "static/media/mussolini.png": "/lineadeltempo/static/media/mussolini.ead93f614ec2e814bb0a.png",
     "static/media/francia.png": "/lineadeltempo/static/media/francia.ae0f879476b20cdb8a8a.png",
     "static/media/Italia_in_guerra.png": "/lineadeltempo/static/media/Italia_in_guerra.6ddc2774eb15d0a16047.png",
@@ -59,10 +61,10 @@
     "static/media/battaglia.png": "/lineadeltempo/static/media/battaglia.a02d7e850d6ba5dd56ed.png",
     "index.html": "/lineadeltempo/index.html",
     "main.a189e101.css.map": "/lineadeltempo/static/css/main.a189e101.css.map",
-    "main.ddc2b5f9.js.map": "/lineadeltempo/static/js/main.ddc2b5f9.js.map"
+    "main.253b1944.js.map": "/lineadeltempo/static/js/main.253b1944.js.map"
   },
   "entrypoints": [
     "static/css/main.a189e101.css",
-    "static/js/main.ddc2b5f9.js"
+    "static/js/main.253b1944.js"
   ]
 }
